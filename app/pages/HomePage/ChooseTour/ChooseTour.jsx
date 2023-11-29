@@ -1,7 +1,10 @@
 'use client';
 import { useState } from 'react';
+import Card from 'components/Card/Card';
+import { chooseCards } from '../../../utils/mock';
 
 import styles from './choose-tour.module.scss';
+import cardStyles from './choose-tour-card.module.scss';
 export default function ChooseTour() {
   const [activeTab, setActiveTab] = useState('popular');
 
@@ -54,15 +57,15 @@ export default function ChooseTour() {
           })}
         </div>
 
-        {/*<ul className={styles.choose_tour__list}>*/}
-        {/*  {chooseCards.map((item, index) => {*/}
-        {/*    return (*/}
-        {/*      <li key={index}>*/}
-        {/*        <Card info={item} key={index} cN={cardStyles} />*/}
-        {/*      </li>*/}
-        {/*    );*/}
-        {/*  })}*/}
-        {/*</ul>*/}
+        <ul className={styles.choose_tour__list}>
+          {chooseCards.map((item, index) => {
+            return (
+              <li key={index}>
+                <Card info={item} key={index} cN={cardStyles} />
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );

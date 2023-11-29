@@ -1,6 +1,10 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+import styles from './card.module.scss';
 export default function Card({ info, cN }) {
   return (
-    <article className={`${cN.card__article} ${styles.card}`}>
+    <article className={`${cN.card} ${styles.card}`}>
       <div className={`${cN.card__text} ${styles.card__text}`}>
         <h3 className={`${cN.title} ${styles.card__title}`}>{info.title}</h3>
         <p className={`${cN.description} ${styles.card__description}`}>
@@ -23,13 +27,13 @@ export default function Card({ info, cN }) {
           <div className={styles.card__social}>
             {info.social.map((item) => {
               return (
-                <Link
-                  target="_blank"
-                  to={item.link}
+                <a
                   key={item.name}
-                  className={styles.social_link}>
+                  className={styles.social_link}
+                  href={item.link}
+                  target="_blank">
                   {item.name}
-                </Link>
+                </a>
               );
             })}
           </div>
