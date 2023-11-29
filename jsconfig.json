@@ -3,7 +3,8 @@
     "baseUrl": "app",
     "paths": {
       "./*": ["./app/*"],
-      "styles/*": ["styles/*"]
+      "styles/*": ["styles/*"],
+      "components/*": ["components/*"]
     },
     "include": ["app"],
     "exclude": ["node_modules"]

@@ -1,0 +1,158 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+
+  @include vp-767 {
+    border-radius: 20px;
+  }
+
+  &:hover {
+    .card__link {
+      background-color: var(--green400);
+    }
+
+    img {
+      transform: scale(1.2);
+    }
+  }
+
+  &:focus-within {
+    img {
+      transform: scale(1.2);
+    }
+  }
+
+  &:active {
+    .card__link {
+      background-color: var(--orange200);
+    }
+  }
+}
+
+.card__overlay {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg,rgba(0,0,0,.4)0,rgba(0,0,0,.06) 48.44%,rgba(0,0,0,.5) 100%);
+  z-index: 1;
+  border-radius: 50px;
+
+  @include vp-767 {
+    border-radius: 20px;
+  }
+}
+
+.card__title {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 122%;
+  color: var(--white);
+
+  @include vp-767 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.92px;
+  }
+}
+
+.card__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+
+  @include vp-767 {
+    border-radius: 20px;
+  }
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+
+.card__description {
+  color: var(--white);
+}
+
+.card__footer {
+  position: relative;
+  z-index: 12;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 7px 20px;
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 122%;
+  border-radius: 50px;
+  color: var(--white);
+  background-color: transparent;
+  cursor: pointer;
+  transform: translateX(-20px);
+  outline: 0;
+
+  @include vp-767 {
+    font-size: 1.6rem;
+    line-height: 142%; /* 22.72px */
+  }
+
+  &:focus-visible {
+    background-color: var(--green400);
+  }
+
+  &:active {
+    background-color: var(--orange200);
+  }
+}
+
+
+.card__social {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+
+.social_link {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 142%;
+  color: var(--white);
+  outline: 0;
+
+
+  @include hover-focus {
+    text-decoration: underline;
+  }
+
+  @include active {
+    color: var(--orange200);
+  }
+}
