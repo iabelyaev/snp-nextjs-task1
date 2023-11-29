@@ -294,3 +294,66 @@
     }
   }
 }
+
+.form_buttons {
+  display: flex;
+  gap: 30px;
+  max-width: 500px;
+
+  @include vp-767 {
+    gap: 10px;
+  }
+}
+
+.form_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  background-color: transparent;
+  color: var(--white);
+  border: 0;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 142%;
+  padding: 15px 30px;
+  border-radius: 10px;
+  outline: 0;
+  cursor: pointer;
+
+  @include vp-767 {
+    font-size: 1.6rem;
+    padding: 12px 26px;
+  }
+
+  &__primary {
+    background-color: var(--green400);
+
+    @include hover-focus {
+      background-color: var(--green300);
+    }
+
+    @include active {
+      background-color: var(--green200);
+    }
+  }
+
+  &__secondary {
+    background-color: var(--green100);
+    color: var(--green400);
+
+    @include hover-focus {
+      background-color: var(--gray100);
+    }
+
+    @include active {
+      background-color: var(--gray200);
+    }
+  }
+
+  &:disabled {
+    opacity: .3;
+    pointer-events: none;
+  }
+}
