@@ -1,0 +1,50 @@
+@mixin hover-focus {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+
+  &.focus-visible:focus,
+  &:focus-visible {
+    @content;
+  }
+}
+
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover:not(.focus-visible) {
+      @content;
+    }
+  }
+}
+
+@mixin focus {
+  &.focus-visible:focus {
+    @content;
+  }
+}
+
+@mixin active {
+  &:active:not(.focus-visible) {
+    @content;
+  }
+}
+
+// Desktop first
+
+$vp-1280: 1280px;
+$vp-768: 768px;
+
+@mixin vp-1279 {
+  @media (max-width: ($vp-1280 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: ($vp-768 - 1px)) {
+    @content;
+  }
+}
