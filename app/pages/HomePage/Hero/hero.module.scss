@@ -1,0 +1,101 @@
+.hero {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 39.9%),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%),
+          url("/images/hero-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 831px;
+
+  @include vp-767 {
+    min-height: 488px;
+  }
+}
+
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 9rem;
+  max-width: 76.8rem;
+  min-height: 83.1rem;
+  margin: 0 auto;
+  gap: 5rem;
+
+  @include vp-1279 {
+    padding-top: 18rem;
+    min-height: 74.3rem;
+  }
+
+  @include vp-767 {
+    padding-top: 9rem;
+    min-height: 48.8rem;
+    gap: 4rem;
+  }
+}
+
+.hero__title {
+  font-size: 9.6rem;
+  font-weight: 700;
+  line-height: 109%;
+  letter-spacing: 1.92px;
+  margin: 0;
+  color: var(--white);
+
+  @include vp-767 {
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 112%;
+    letter-spacing: 0.68px;
+  }
+}
+
+.hero__description {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 142%;
+  color: var(--white);
+  margin: 0;
+  padding: 0 10rem;
+
+  @include vp-1279 {
+    padding: 0 15rem;
+  }
+
+  @include vp-767 {
+    font-size: 1.6rem;
+    padding: 0 1.5rem;
+  }
+}
+
+.hero__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 20px;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 142%;
+  letter-spacing: -0.17px;
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 10px;
+  cursor: pointer;
+  outline: 0;
+
+  @include vp-767 {
+    font-size: 1.6rem;
+    letter-spacing: -0.16px;
+  }
+
+  @include hover-focus {
+    background-color: var(--orange200);
+    color: var(--white);
+  }
+
+  @include active {
+    background-color: var(--orange100);
+    color: var(--black);
+  }
+}
