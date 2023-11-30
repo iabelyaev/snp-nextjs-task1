@@ -1,5 +1,7 @@
 import { roboto } from './fonts';
-import Header from './components/Header/Header';
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
+import { Metadata } from 'next';
 
 import {
   faFacebook,
@@ -17,6 +19,11 @@ library.add(faArrowRight, faInstagram, faFacebook, faVk);
 export const metadata = {
   title: 'YourTour',
   description: 'Сhoose your tour',
+  icons: {
+    icon: ['/icon.svg'],
+    apple: ['/apple-icon.png'],
+  },
+  manifest: '/manifest.webmanifest',
 };
 
 export default function RootLayout({ children }) {
@@ -26,6 +33,7 @@ export default function RootLayout({ children }) {
         <div className="page-layout">
           <Header />
           {children}
+          <Footer />
         </div>
       </body>
     </html>
