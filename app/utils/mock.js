@@ -225,7 +225,7 @@ export const socials = [
     name: 'instagram',
     link: '/',
     fontawesome: {
-      prefix: ['fab' || 'fa'],
+      prefix: 'fab',
       name: 'instagram',
     },
   },
@@ -233,7 +233,7 @@ export const socials = [
     name: 'facebook',
     link: '/',
     fontawesome: {
-      prefix: ['fab' || 'fa'],
+      prefix: 'fab',
       name: 'facebook',
     },
   },
@@ -241,7 +241,7 @@ export const socials = [
     name: 'vkontakte',
     link: '/',
     fontawesome: {
-      prefix: ['fab' || 'fa'],
+      prefix: 'fab',
       name: 'vk',
     },
   },
