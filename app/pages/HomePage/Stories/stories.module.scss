@@ -1,0 +1,23 @@
+.stories {
+  padding-bottom: 13.5rem;
+
+  @include vp-767 {
+    padding-bottom: 7.5rem;
+  }
+}
+
+.stories__list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  @include vp-767 {
+    gap: 20px;
+  }
+}
+
+.stories__wrapper_title {
+  @include vp-767 {
+    margin-bottom: 50px;
+  }
+}

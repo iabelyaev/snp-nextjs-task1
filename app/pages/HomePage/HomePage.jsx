@@ -3,6 +3,7 @@ import ChooseTour from './ChooseTour/ChooseTour';
 import Form from './Form/Form';
 import Reviews from './Reviews/Reviews';
 import Gallery from './Gallery/Gallery';
+import Stories from './Stories/Stories';
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <Form />
       <Reviews />
       <Gallery />
+      <Stories />
     </>
   );
 }
