@@ -61,7 +61,13 @@ export default function ChooseTour() {
           {chooseCards.map((item, index) => {
             return (
               <li key={index}>
-                <Card info={item} key={index} cN={cardStyles} />
+                <Card
+                  info={item}
+                  width={370}
+                  height={531}
+                  key={index}
+                  cN={cardStyles}
+                />
               </li>
             );
           })}
