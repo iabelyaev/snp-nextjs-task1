@@ -1,5 +1,6 @@
 import { roboto } from './fonts';
-import Header from './components/Header/Header';
+import Header from 'components/Header/Header';
+import Footer from 'components/Footer/Footer';
 
 import {
   faFacebook,
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
         <div className="page-layout">
           <Header />
           {children}
+          <Footer />
         </div>
       </body>
     </html>
