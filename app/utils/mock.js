@@ -219,3 +219,30 @@ export const storiesCard = [
     ],
   },
 ];
+
+export const socials = [
+  {
+    name: 'instagram',
+    link: '/',
+    fontawesome: {
+      prefix: ['fab' || 'fa'],
+      name: 'instagram',
+    },
+  },
+  {
+    name: 'facebook',
+    link: '/',
+    fontawesome: {
+      prefix: ['fab' || 'fa'],
+      name: 'facebook',
+    },
+  },
+  {
+    name: 'vkontakte',
+    link: '/',
+    fontawesome: {
+      prefix: ['fab' || 'fa'],
+      name: 'vk',
+    },
+  },
+];
