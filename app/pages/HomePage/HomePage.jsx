@@ -4,6 +4,7 @@ import Form from './Form/Form';
 import Reviews from './Reviews/Reviews';
 import Gallery from './Gallery/Gallery';
 import Stories from './Stories/Stories';
+import Offers from './Offers/Offers';
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <Reviews />
       <Gallery />
       <Stories />
+      <Offers />
     </>
   );
 }
