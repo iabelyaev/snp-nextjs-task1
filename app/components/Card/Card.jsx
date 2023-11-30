@@ -1,8 +1,10 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './card.module.scss';
-export default function Card({ info, cN }) {
+export default function Card({ info, cN, width, height }) {
   return (
     <article className={`${cN.card} ${styles.card}`}>
       <div className={`${cN.card__text} ${styles.card__text}`}>
@@ -11,17 +13,19 @@ export default function Card({ info, cN }) {
           {info.price ? 'от 80 000 руб' : info.description}
         </p>
       </div>
-      <img
+      <Image
         className={styles.card__image}
         src={info.img}
         loading="lazy"
         alt=""
+        width={width}
+        height={height}
       />
       <div className={styles.card__footer}>
-        <a className={styles.card__link} href="/">
+        <Link className={styles.card__link} href="/">
           Подробнее
           <FontAwesomeIcon icon={faArrowRight} />
-        </a>
+        </Link>
 
         {info.social && (
           <div className={styles.card__social}>
