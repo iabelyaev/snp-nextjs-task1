@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './card.module.scss';
-export default function Card({ info, cN, width, height }) {
+export default function Card({ info, cN, width, height, path = '/' }) {
   return (
     <article className={`${cN.card} ${styles.card}`}>
       <div className={`${cN.card__text} ${styles.card__text}`}>
@@ -22,7 +22,7 @@ export default function Card({ info, cN, width, height }) {
         height={height}
       />
       <div className={styles.card__footer}>
-        <Link className={styles.card__link} href="/">
+        <Link className={styles.card__link} href={path}>
           Подробнее
           <FontAwesomeIcon icon={faArrowRight} />
         </Link>
