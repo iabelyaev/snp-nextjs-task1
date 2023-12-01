@@ -17,6 +17,17 @@
   }
 }
 
+.header__sticky {
+  position: fixed;
+  z-index: 11;
+  background: rgba(243, 239, 232, 0.60);
+  backdrop-filter: blur(27px);
+
+  .header__wrapper {
+    color: var(--black);
+  }
+}
+
 .header__logo {
   width: 182px;
   height: 32px;
