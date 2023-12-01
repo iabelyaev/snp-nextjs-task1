@@ -8,10 +8,12 @@ import styles from './header.module.scss';
 
 export default function Header() {
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
-  const [isWindowScrollPosition, setIsWindowScrollPosition] = useState(window.scrollY);
+  const [isWindowScrollPosition, setIsWindowScrollPosition] = useState(0);
 
   function handlerScrollWindow () {
-    setIsWindowScrollPosition(window.scrollY)
+    if (typeof window !== undefined) {
+      setIsWindowScrollPosition(window.scrollY)
+    }
   }
 
   useEffect(() => {
