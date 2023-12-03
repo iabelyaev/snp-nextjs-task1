@@ -5,7 +5,7 @@ import styles from './gallery.module.scss';
 import { galleryPhotos } from '../../../utils/mock';
 export default function Gallery() {
   return (
-    <section className={styles.gallery}>
+    <section className={styles.gallery} id='#gallery'>
       <div className={styles.gallery__wrapper}>
         <Title
           cN={styles.gallery__wrapper_title}

@@ -5,7 +5,7 @@ import { reviewCards } from '../../../utils/mock';
 import styles from './reviews.module.scss';
 export default function Reviews() {
   return (
-    <section className={styles.reviews}>
+    <section className={styles.reviews} id="reviews">
       <div className="container">
         <Title
           cN={styles.reviews__wrapper}

@@ -3,7 +3,7 @@ import Title from 'components/Title/Title';
 import Input from 'components/Input/Input';
 export default function Form() {
   return (
-    <section className={styles.form_block}>
+    <section className={styles.form_block} id="form">
       <div className="container">
         <Title title="Собери свой тур" isWrap />
 
