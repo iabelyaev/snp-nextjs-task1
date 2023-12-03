@@ -1,19 +1,19 @@
 export const navLinks = [
   {
     text: 'Туры',
-    path: '/',
+    path: '#choosetour',
   },
   {
     text: 'Создать тур',
-    path: '/',
+    path: '#form',
   },
   {
     text: 'Отзывы',
-    path: '/',
+    path: '#reviews',
   },
   {
     text: 'Истории',
-    path: '/',
+    path: '#story',
   },
 ];
 

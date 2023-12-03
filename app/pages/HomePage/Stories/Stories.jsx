@@ -6,7 +6,7 @@ import cardStyle from './stories-card.module.scss';
 import { storiesCard } from '../../../utils/mock';
 export default function Stories() {
   return (
-    <section className={styles.stories}>
+    <section className={styles.stories} id="story">
       <div className="container">
         <Title title="Истории путешествий" cN={styles.stories__wrapper_title} />
 

@@ -38,7 +38,7 @@ export default function ChooseTour() {
   }
 
   return (
-    <section className={styles.choose_tour}>
+    <section className={styles.choose_tour} id='choosetour'>
       <div className="container">
         <div className={styles.choose_tour__wrapper_title}>
           <h2 className={styles.choose_tour__title}>Выбери свой тур</h2>
