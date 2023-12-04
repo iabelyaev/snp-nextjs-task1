@@ -6,7 +6,6 @@
 
   &__wrapper {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 29px 0;
     color: var(--white);
@@ -14,6 +13,18 @@
     @include vp-767 {
       padding: 33px 0;
     }
+  }
+}
+
+.header__container {
+  padding: 0 55px;
+
+  @include vp-1279 {
+    padding: 0 57px;
+  }
+
+  @include vp-767 {
+    padding: 0 21px;
   }
 }
 

@@ -35,7 +35,7 @@ export default function Header() {
 
   return (
     <header className={getHeaderSticky()}>
-      <div className="container">
+      <div className={styles.header__container}>
         <div className={styles.header__wrapper}>
           <a href="/">
             <Image

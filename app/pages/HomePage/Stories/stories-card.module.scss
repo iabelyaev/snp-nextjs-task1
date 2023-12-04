@@ -26,10 +26,10 @@
 .title {
   padding-right: 3rem;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 37px;
 
-  @include vp-1279 {
-    margin-bottom: 22px;
+  @include vp-767 {
+    margin-bottom: 23px;
     padding-right: 100px;
   }
 }

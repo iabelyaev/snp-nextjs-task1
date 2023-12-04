@@ -20,7 +20,7 @@ export default function Reviews() {
 
                 <div className={styles.card_reviews__footer}>
                   <h3>{card.userInfo.author}</h3>
-                  <p>`Тур: {card.userInfo.titleTour}`</p>
+                  <p>Тур: {card.userInfo.titleTour}</p>
                   <Image
                     src={card.userInfo.img}
                     alt={card.userInfo.author}
