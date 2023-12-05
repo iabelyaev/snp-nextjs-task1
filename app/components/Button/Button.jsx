@@ -1,10 +1,11 @@
-import PropTypes from "prop-types";
-import cx from 'classnames'
-import styles from './Button.module.scss'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import cx from 'classnames'
+import PropTypes from "prop-types";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-export default function Button(props) {
+import styles from './Button.module.scss'
+
+function Button(props) {
   const {
     type,
     href,
@@ -38,9 +39,10 @@ export default function Button(props) {
   )
 }
 
-
 Button.propTypes = {
   type: PropTypes.string,
   href: PropTypes.string,
   disabled: PropTypes.any
 }
+
+export default Button;

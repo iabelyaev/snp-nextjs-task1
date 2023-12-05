@@ -1,11 +1,13 @@
 import Image from 'next/image';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from "prop-types";
+import cx from "classnames";
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
+import Button from "components/Button/Button";
 
 import styles from './card.module.scss';
-import cx from "classnames";
-import Button from "components/Button/Button";
-export default function Card({ info, width, height, path = '/', isCardChoose, isCardStory,}) {
+
+function Card({ info, width, height, path = '/', isCardChoose, isCardStory,}) {
   return (
     <article className={cx(styles.card,
       {[styles.cardChoose]: isCardChoose,
@@ -68,3 +70,5 @@ Card.propTypes = {
   isCardChoose: PropTypes.bool,
   isCardStory: PropTypes.bool
 }
+
+export default Card;

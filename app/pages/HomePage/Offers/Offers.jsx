@@ -1,8 +1,10 @@
 import Image from 'next/image';
+
 import Container from "components/Container/Container";
+
 import styles from './offers.module.scss';
 
-export default function Offers() {
+function Offers() {
   return (
     <section className={styles.offers}>
       <Container>
@@ -27,3 +29,5 @@ export default function Offers() {
     </section>
   );
 }
+
+export default Offers;

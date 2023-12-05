@@ -1,6 +1,7 @@
-import styles from './hero.module.scss';
 import Container from "components/Container/Container";
-export default function Hero() {
+
+import styles from './hero.module.scss';
+function Hero() {
   return (
     <section className={styles.hero}>
       <Container>
@@ -20,3 +21,5 @@ export default function Hero() {
     </section>
   );
 }
+
+export default Hero;

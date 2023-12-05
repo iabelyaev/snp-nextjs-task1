@@ -1,10 +1,12 @@
 import Image from 'next/image';
-import Title from 'components/Title/Title';
-import styles from './gallery.module.scss';
 
 import {gallery} from "stubs/gallery";
 
-export default function Gallery() {
+import Title from 'components/Title/Title';
+
+import styles from './gallery.module.scss';
+
+function Gallery() {
   return (
     <section className={styles.gallery} id='#gallery'>
       <div className={styles.gallery__wrapper}>
@@ -64,3 +66,5 @@ export default function Gallery() {
     </section>
   );
 }
+
+export default Gallery;

@@ -1,11 +1,14 @@
 'use client';
 import { useState } from 'react';
-import Card from 'components/Card/Card';
-import Container from "components/Container/Container";
+
 import {chooseCards} from "stubs/choose";
 
+import Card from 'components/Card/Card';
+import Container from "components/Container/Container";
+
 import styles from './choose-tour.module.scss';
-export default function ChooseTour() {
+
+function ChooseTour() {
   const [activeTab, setActiveTab] = useState('popular');
 
   const tabs = [
@@ -30,6 +33,7 @@ export default function ChooseTour() {
       category: 'cyclingTrips',
     },
   ];
+
   function getActiveTab(category) {
     const cN = styles.tab;
     return activeTab === category
@@ -43,6 +47,7 @@ export default function ChooseTour() {
         <div className={styles.wrapperTitle}>
           <h2 className={styles.title}>Выбери свой тур</h2>
         </div>
+
         <div className={styles.tabs}>
           {tabs.map((item) =>
               <button
@@ -69,7 +74,8 @@ export default function ChooseTour() {
           )}
         </ul>
       </Container>
-
     </section>
   );
 }
+
+export default ChooseTour;

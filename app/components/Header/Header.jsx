@@ -1,13 +1,15 @@
 'use client'
 import {useState, useEffect} from "react";
-import cx from 'classnames'
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
+import cx from 'classnames'
+
 import {navigation} from "stubs/navigation";
 
 import styles from './header.module.scss';
 
-export default function Header() {
+
+function Header() {
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
   const [isWindowScrollPosition, setIsWindowScrollPosition] = useState(0);
 
@@ -65,3 +67,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;

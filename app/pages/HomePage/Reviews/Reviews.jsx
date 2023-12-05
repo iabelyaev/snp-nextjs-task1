@@ -1,10 +1,13 @@
 import Image from 'next/image';
-import Title from 'components/Title/Title';
+
 import {reviews} from "stubs/reviews";
+
+import Title from 'components/Title/Title';
 import Container from "components/Container/Container";
 
 import styles from './reviews.module.scss';
-export default function Reviews() {
+
+function Reviews() {
   return (
     <section className={styles.reviews} id="reviews">
       <Container>
@@ -37,3 +40,5 @@ export default function Reviews() {
     </section>
   );
 }
+
+export default Reviews;

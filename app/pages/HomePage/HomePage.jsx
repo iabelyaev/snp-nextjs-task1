@@ -6,7 +6,7 @@ import Gallery from './Gallery/Gallery';
 import Stories from './Stories/Stories';
 import Offers from './Offers/Offers';
 
-export default function HomePage() {
+function HomePage() {
   return (
     <>
       <Hero />
@@ -19,3 +19,5 @@ export default function HomePage() {
     </>
   );
 }
+
+export default HomePage;

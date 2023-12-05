@@ -1,9 +1,11 @@
-import styles from './form.module.scss';
+import cx from 'classnames'
+
+import Container from "components/Container/Container";
 import Title from 'components/Title/Title';
 import Input from 'components/Input/Input';
-import Container from "components/Container/Container";
-import cx from 'classnames'
-export default function Form() {
+
+import styles from './form.module.scss';
+function Form() {
   return (
     <section className={styles.form_block} id="form">
       <Container>
@@ -132,3 +134,5 @@ export default function Form() {
     </section>
   );
 }
+
+export default Form;

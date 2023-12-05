@@ -1,8 +1,10 @@
 'use client';
 import InputMask from 'react-input-mask';
-import styles from './input.module.scss';
 import PropTypes from "prop-types";
-export default function Input(props) {
+
+import styles from './input.module.scss';
+
+function Input(props) {
   const { title, ...rest } = props;
 
   return (
@@ -16,3 +18,5 @@ export default function Input(props) {
 Input.propTypes = {
   title: PropTypes.string
 }
+
+export default Input;
