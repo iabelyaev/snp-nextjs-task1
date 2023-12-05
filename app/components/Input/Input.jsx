@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import styles from './input.module.scss';
 
-function Input(props) {
+const Input = (props) => {
   const { title, ...rest } = props;
 
   return (

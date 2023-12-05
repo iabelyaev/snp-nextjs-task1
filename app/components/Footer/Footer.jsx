@@ -6,7 +6,7 @@ import Container from "components/Container/Container";
 
 import styles from './footer.module.scss';
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className={styles.footer}>
       <Container>

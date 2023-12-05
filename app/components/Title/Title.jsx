@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 import styles from './title.module.scss';
 
-function Title({ title, isWrap, className }) {
+const Title = ({ title, isWrap, className }) => {
   return (
     <div className={`${styles.wrapper} ${className ? className : ''}`}>
       <h2 className={styles.title}>{title}</h2>

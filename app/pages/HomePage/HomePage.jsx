@@ -6,7 +6,7 @@ import Gallery from './Gallery/Gallery';
 import Stories from './Stories/Stories';
 import Offers from './Offers/Offers';
 
-function HomePage() {
+const HomePage = () => {
   return (
     <>
       <Hero />

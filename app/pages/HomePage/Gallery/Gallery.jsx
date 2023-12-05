@@ -6,7 +6,7 @@ import Title from 'components/Title/Title';
 
 import styles from './gallery.module.scss';
 
-function Gallery() {
+const Gallery = () => {
   return (
     <section className={styles.gallery} id='#gallery'>
       <div className={styles.gallery__wrapper}>

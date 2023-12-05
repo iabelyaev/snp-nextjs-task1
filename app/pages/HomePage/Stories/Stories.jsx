@@ -6,7 +6,7 @@ import Container from "components/Container/Container";
 
 import styles from './stories.module.scss';
 
-function Stories() {
+const Stories = () => {
   return (
     <section className={styles.stories} id="story">
       <Container>

@@ -7,7 +7,7 @@ import Container from "components/Container/Container";
 
 import styles from './reviews.module.scss';
 
-function Reviews() {
+const Reviews = () => {
   return (
     <section className={styles.reviews} id="reviews">
       <Container>

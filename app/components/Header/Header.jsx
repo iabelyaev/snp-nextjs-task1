@@ -9,11 +9,11 @@ import {navigation} from "stubs/navigation";
 import styles from './header.module.scss';
 
 
-function Header() {
+const Header = () => {
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
   const [isWindowScrollPosition, setIsWindowScrollPosition] = useState(0);
 
-  function handlerScrollWindow () {
+  const handlerScrollWindow = () => {
     setIsWindowScrollPosition(window.scrollY)
   }
 

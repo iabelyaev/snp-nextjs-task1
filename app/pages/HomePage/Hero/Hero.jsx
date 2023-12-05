@@ -1,7 +1,7 @@
 import Container from "components/Container/Container";
 
 import styles from './hero.module.scss';
-function Hero() {
+const Hero = () => {
   return (
     <section className={styles.hero}>
       <Container>

@@ -8,7 +8,7 @@ import Container from "components/Container/Container";
 
 import styles from './choose-tour.module.scss';
 
-function ChooseTour() {
+const ChooseTour = () => {
   const [activeTab, setActiveTab] = useState('popular');
 
   const tabs = [
@@ -34,12 +34,12 @@ function ChooseTour() {
     },
   ];
 
-  function getActiveTab(category) {
+ const getActiveTab = (category) => {
     const cN = styles.tab;
     return activeTab === category
       ? `${cN} ${styles.tab__active}`
       : cN;
-  }
+ }
 
   return (
     <section className={styles.choose_tour} id='choosetour'>

@@ -7,7 +7,14 @@ import Button from "components/Button/Button";
 
 import styles from './card.module.scss';
 
-function Card({ info, width, height, path = '/', isCardChoose, isCardStory,}) {
+const Card = (
+  { info,
+    width,
+    height,
+    path = '/',
+    isCardChoose,
+    isCardStory
+  }) => {
   return (
     <article className={cx(styles.card,
       {[styles.cardChoose]: isCardChoose,
@@ -37,7 +44,7 @@ function Card({ info, width, height, path = '/', isCardChoose, isCardStory,}) {
         height={height}
       />
       <div className={styles.footer}>
-        <Button href='/' icon={faArrowRight}>
+        <Button href={path} icon={faArrowRight}>
           Подробнее
         </Button>
 

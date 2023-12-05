@@ -5,7 +5,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import styles from './Button.module.scss'
 
-function Button(props) {
+const Button = (props) => {
   const {
     type,
     href,

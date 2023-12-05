@@ -4,7 +4,7 @@ import Container from "components/Container/Container";
 
 import styles from './offers.module.scss';
 
-function Offers() {
+const Offers = () => {
   return (
     <section className={styles.offers}>
       <Container>
