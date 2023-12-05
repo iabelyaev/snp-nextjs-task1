@@ -6,7 +6,7 @@
   }
 }
 
-.stories__list {
+.list {
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -16,7 +16,7 @@
   }
 }
 
-.stories__wrapper_title {
+.wrapperTitle {
   @include vp-767 {
     margin-bottom: 50px;
   }

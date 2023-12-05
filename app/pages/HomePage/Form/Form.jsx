@@ -1,10 +1,13 @@
 import styles from './form.module.scss';
 import Title from 'components/Title/Title';
 import Input from 'components/Input/Input';
+import Container from "components/Container/Container";
+import cx from 'classnames'
 export default function Form() {
   return (
     <section className={styles.form_block} id="form">
-      <div className="container">
+      <Container>
+
         <Title title="Собери свой тур" isWrap />
 
         <form
@@ -71,61 +74,61 @@ export default function Form() {
               />
             </label>
           </div>
-          <fieldset className={styles.form__faq}>
-            <legend className={styles.form__legend}>Вам есть 18 лет?</legend>
-            <div className={styles.form__radiobox}>
-              <label className={styles.form__item}>
+          <fieldset className={styles.faq}>
+            <legend className={styles.legend}>Вам есть 18 лет?</legend>
+            <div className={styles.radiobox}>
+              <label className={styles.item}>
                 <input
-                  className={`${styles.form__control} ${'visually_hidden'}`}
+                  className={cx(styles.control, 'visually_hidden')}
                   type="radio"
                   name="type"
                   required
                 />
                 <span></span>
-                <span className={styles.form__control_title}>Да</span>
+                <span className={styles.controlTitle}>Да</span>
               </label>
-              <label className={styles.form__item}>
+              <label className={styles.item}>
                 <input
-                  className={`${styles.form__control} ${'visually_hidden'}`}
+                  className={cx(styles.control, 'visually_hidden')}
                   type="radio"
                   name="type"
                   required
                 />
                 <span></span>
-                <span className={styles.form__control_title}>Нет</span>
+                <span className={styles.controlTitle}>Нет</span>
               </label>
             </div>
           </fieldset>
-          <fieldset className={styles.form__faq}>
+          <fieldset className={styles.faq}>
             <label
-              className={`${styles.form__item} ${styles.form__item_check}`}>
+              className={cx(styles.item, {[styles.item_checkbox]: true})}>
               <input
-                className={`${styles.form__control} ${'visually_hidden'}`}
+                className={cx(styles.control, 'visually_hidden')}
                 type="checkbox"
                 name="yes"
                 required
               />
               <span></span>
-              <span className={styles.form__checkbox_text}>
+              <span className={styles.checkboxText}>
                 Нажимая кнопку, я принимаю условия{' '}
                 <a href="/">Лицензионного договора</a>
               </span>
             </label>
           </fieldset>
-          <div className={styles.form_buttons}>
+          <div className={styles.buttons}>
             <button
-              className={`${styles.form_button} ${styles.form_button__primary}`}
+              className={cx(styles.button, {[styles.primary]: true})}
               type="submit">
               Найти тур
             </button>
             <button
-              className={`${styles.form_button} ${styles.form_button__secondary}`}
+              className={cx(styles.button, {[styles.secondary]: true})}
               type="reset">
               Сбросить
             </button>
           </div>
         </form>
-      </div>
+      </Container>
     </section>
   );
 }

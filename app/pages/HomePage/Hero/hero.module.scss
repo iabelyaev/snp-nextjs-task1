@@ -1,28 +1,28 @@
 .hero {
+  min-height: 831px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 39.9%),
           linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%),
           url("/images/hero-img.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 831px;
 
   @include vp-767 {
     min-height: 488px;
   }
 }
 
-.hero__wrapper {
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding-top: 9rem;
   max-width: 76.8rem;
   min-height: 83.1rem;
   margin: 0 auto;
   gap: 5rem;
+  text-align: center;
 
   @include vp-1279 {
     padding-top: 17.7rem;
@@ -36,13 +36,13 @@
   }
 }
 
-.hero__title {
+.title {
+  margin: 0;
   font-size: 9.6rem;
   font-weight: 700;
   line-height: 109%;
   letter-spacing: 1.92px;
-  margin: 0;
-  color: var(--white);
+  color: $color-default-white;
 
   @include vp-767 {
     font-size: 3.4rem;
@@ -52,11 +52,11 @@
   }
 }
 
-.hero__description {
+.description {
   font-size: 2rem;
   font-weight: 400;
   line-height: 142%;
-  color: var(--white);
+  color: $color-default-white;
   margin: 0;
   padding: 0 10rem;
 
@@ -70,7 +70,7 @@
   }
 }
 
-.hero__link {
+.link {
   display: inline-flex;
   align-items: center;
   padding: 5px 20px;
@@ -78,8 +78,8 @@
   font-weight: 400;
   line-height: 142%;
   letter-spacing: -0.17px;
-  color: var(--black);
-  background-color: var(--white);
+  color: $color-black;
+  background-color: $color-default-white;
   border-radius: 10px;
   cursor: pointer;
   outline: 0;
@@ -90,12 +90,12 @@
   }
 
   @include hover-focus {
-    background-color: var(--orange200);
-    color: var(--white);
+    background-color: $color-orange200;
+    color: $color-default-white;
   }
 
   @include active {
-    background-color: var(--orange100);
-    color: var(--black);
+    background-color: $color-orange200;
+    color: $color-black;
   }
 }

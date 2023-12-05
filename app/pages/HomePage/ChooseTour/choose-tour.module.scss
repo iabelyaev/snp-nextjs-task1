@@ -6,7 +6,7 @@
   }
 }
 
-.choose_tour__title {
+.title {
   font-size: 5.9rem;
   font-weight: 700;
   line-height: 124%;
@@ -22,11 +22,11 @@
   }
 }
 
-.choose_tour__wrapper_title {
+.wrapperTitle {
   text-align: center;
 }
 
-.choose_tour__tabs {
+.tabs {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -36,28 +36,27 @@
   margin-bottom: 10rem;
   max-width: 750px;
 
-
   @include vp-767 {
     gap: 1rem;
     margin-bottom: 5rem;
   }
 }
 
-.choose_tour__tab {
+.tab {
   position: relative;
   display: inline-flex;
   align-items: center;
-  border: 0;
-  background-color: transparent;
   font-family: inherit;
+  padding: 0;
+  padding-bottom: 0.6rem;
   font-size: 2.3rem;
   font-weight: 700;
   line-height: 122%;
-  padding: 0;
-  padding-bottom: 0.6rem;
+  background-color: transparent;
   color: var(--black);
-  cursor: pointer;
+  border: 0;
   outline: 0;
+  cursor: pointer;
 
   @include hover-focus {
     &::after {
@@ -77,30 +76,30 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 2px;
     width: 0;
+    height: 2px;
+    background-color: $color-black;
     transition: width 0.3s ease;
-    background-color: var(--black);
   }
 
   &__active {
-    color: var(--orange200);
+    color: $color-orange200;
 
     &::after {
       width: 100%;
-      background-color: var(--orange200);
+      background-color: $color-orange200;
     }
   }
 }
 
 
-.choose_tour__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
   @include vp-1279 {
     grid-template-columns: repeat(2,1fr);
@@ -111,3 +110,4 @@
     grid-template-columns: repeat(auto-fill, minmax(318px, 1fr));
   }
 }
+

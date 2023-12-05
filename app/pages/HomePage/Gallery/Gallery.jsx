@@ -8,7 +8,7 @@ export default function Gallery() {
     <section className={styles.gallery} id='#gallery'>
       <div className={styles.gallery__wrapper}>
         <Title
-          cN={styles.gallery__wrapper_title}
+          className={styles.gallery__wrapper_title}
           title="Фотографии путешествий"
         />
         <div

@@ -10,7 +10,7 @@
 
 .form {
   padding: 70px;
-  background-color: var(--white);
+  background-color: $color-default-white;
   border-radius: 50px;
 
   @include vp-1279 {
@@ -50,7 +50,7 @@
     font-size: 2rem;
     font-weight: 400;
     line-height: 142%;
-    color: var(--black);
+    color: $color-black;
 
     @include vp-767 {
       font-size: 1.6rem;
@@ -59,17 +59,17 @@
 }
 
 .form__field {
-  width: 100%;
   position: relative;
-  border-radius: 10px;
-  border: 1px solid var(--beige200);
-  background-color: var(--beige100);
   padding: 20px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid $color-beige200;
+  background-color: $color-beige200;
   font-family: inherit;
   font-size: 20px;
   font-weight: 400;
   line-height: 142%;
-  color: var(--gray300);
+  color: $color-gray300;
   outline: 0;
 
   @include vp-1279 {
@@ -83,22 +83,22 @@
   }
 
   @include hover {
-    background-color: var(--beige200);
+    background-color: $color-beige200;
   }
 
   &:focus {
-    border-color: var(--gray300);
-    background-color: var(--beige200);
+    border-color: $color-gray300;
+    background-color: $color-beige200;
   }
 }
 
 .form__select {
   width: 100%;
+  color: $color-black;
   appearance: none;
-  color: var(--black);
 
   &:required:invalid {
-    color: var(--gray300);
+    color: $color-gray300;
   }
 }
 
@@ -108,14 +108,14 @@
   &::after {
     content: "";
     position: absolute;
+    top: 25px;
+    right: 27px;
     display: block;
     width: 13px;
     height: 13px;
-    right: 27px;
-    top: 25px;
-    transform: rotate(45deg);
-    border: solid var(--black);
+    border: solid $color-black;
     border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
 
     @include vp-767 {
       right: 18px;
@@ -125,8 +125,8 @@
 }
 
 .form__textarea {
-  resize: vertical;
   min-height: 152px;
+  resize: vertical;
 
   @include vp-767 {
     min-height: 132px;
@@ -141,39 +141,39 @@
   }
 }
 
-.form__faq {
-  border: 0;
-  padding: 0;
-  margin: 0;
+.faq {
   display: flex;
   flex-direction: column;
+  padding: 0;
+  margin: 0;
   margin-bottom: 33px;
+  border: 0;
 
   @include vp-767 {
     margin-bottom: 31px;
   }
 }
 
-.form__radiobox {
+.radiobox {
   display: flex;
   align-items: center;
   gap: 30px;
 }
 
-.form__legend {
+.legend {
+  margin-bottom: 8px;
   font-family: inherit;
   font-size: 2rem;
   font-weight: 400;
   line-height: 142%;
-  color: var(--black);
-  margin-bottom: 8px;
+  color: $color-black;
 
   @include vp-767 {
     font-size: 1.6rem;
   }
 }
 
-.form__item {
+.item {
   position: relative;
   display: flex;
   align-items: center;
@@ -182,27 +182,29 @@
   @include vp-767 {
     padding-left: 31px;
   }
+
+  &_checkbox {
+    padding-left: 45px;
+
+    @include vp-1279 {
+      padding-left: 37px;
+    }
+
+    @include vp-767 {
+      padding-left: 31px;
+    }
+  }
 }
 
-.form__item_check {
-  padding-left: 45px;
 
-  @include vp-1279 {
-    padding-left: 37px;
-  }
 
-  @include vp-767 {
-    padding-left: 31px;
-  }
-}
-
-.form__control[type='radio'] + span {
+.control[type='radio'] + span {
+  position: absolute;
+  left: 1px;
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  position: absolute;
-  left: 1px;
-  border: 2px solid var(--black);
+  border: 2px solid $color-black;
 
   @include vp-767 {
     width: 20px;
@@ -210,39 +212,39 @@
   }
 }
 
-.form__control[type='radio']:checked + span {
+.control[type='radio']:checked + span {
   &::after {
     content: "";
     position: absolute;
+    top: 50%;
+    left: 50%;
     width: 12px;
     height: 12px;
-    background-color: var(--black);
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    background-color: $color-black;
     border-radius: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
-.form__control_title {
+.controlTitle {
   font-size: 2rem;
   font-weight: 400;
   line-height: 142%;
-  color: var(--black);
+  color: $color-black;
 
   @include vp-767 {
     font-size: 1.6rem;
   }
 }
 
-.form__control[type='checkbox'] + span {
+.control[type='checkbox'] + span {
   position: absolute;
   left: 1px;
   top: 0;
   width: 26px;
   height: 26px;
   border-radius: 5px;
-  border: 2px solid var(--black);
+  border: 2px solid $color-black;
 
   @include vp-767 {
     width: 20px;
@@ -250,18 +252,18 @@
   }
 }
 
-.form__control[type='checkbox']:checked + span {
+.control[type='checkbox']:checked + span {
   &::after {
     content: "";
     position: absolute;
-    display: block;
-    border-left: 2px solid var(--black);
-    border-bottom: 2px solid var(--black);
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%) rotate(-45deg);
+    display: block;
     width: 12px;
     height: 7px;
+    border-left: 2px solid $color-black;
+    border-bottom: 2px solid $color-black;
+    transform: translate(-50%, -50%) rotate(-45deg);
 
     @include vp-767 {
       width: 9px;
@@ -271,12 +273,12 @@
 }
 
 
-.form__checkbox_text {
+.checkboxText {
   font-size: 1.7rem;
   font-weight: 400;
-  line-height: 142%; /* 24.14px */
+  line-height: 142%;
   letter-spacing: -0.17px;
-  color: var(--gray300);
+  color: $color-gray300;
 
   @include vp-767 {
     font-size: 1.6rem;
@@ -284,18 +286,19 @@
   }
 
   a {
-    color: var(--black);
+    color: $color-black;
+
     @include hover {
       text-decoration: underline;
     }
 
     @include active {
-      color: var(--green400);
+      color: $color-green400;
     }
   }
 }
 
-.form_buttons {
+.buttons {
   display: flex;
   gap: 30px;
   max-width: 500px;
@@ -305,19 +308,19 @@
   }
 }
 
-.form_button {
+.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 50%;
-  background-color: transparent;
-  color: var(--white);
-  border: 0;
+  padding: 15px 30px;
   font-family: inherit;
   font-size: 2rem;
   font-weight: 400;
   line-height: 142%;
-  padding: 15px 30px;
+  color:$color-default-white;
+  background-color: transparent;
+  border: 0;
   border-radius: 10px;
   outline: 0;
   cursor: pointer;
@@ -327,28 +330,28 @@
     padding: 12px 26px;
   }
 
-  &__primary {
-    background-color: var(--green400);
+  &.primary {
+    background-color: $color-green400;
 
     @include hover-focus {
-      background-color: var(--green300);
+      background-color: $color-green300;
     }
 
     @include active {
-      background-color: var(--green200);
+      background-color: $color-green200;
     }
   }
 
-  &__secondary {
-    background-color: var(--green100);
-    color: var(--green400);
+  &.secondary {
+    background-color: $color-green100;
+    color: $color-green400;
 
     @include hover-focus {
-      background-color: var(--gray100);
+      background-color: $color-green100;
     }
 
     @include active {
-      background-color: var(--gray200);
+      background-color: $color-green200;
     }
   }
 

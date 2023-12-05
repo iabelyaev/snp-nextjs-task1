@@ -1,7 +1,7 @@
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
   border-radius: 50px;
   cursor: pointer;
   overflow: hidden;
@@ -11,7 +11,7 @@
   }
 
   &:hover {
-    .card__link {
+    .link {
       background-color: $color-green400;
     }
 
@@ -27,13 +27,13 @@
   }
 
   &:active {
-    .card__link {
+    .link {
       background-color: $color-orange200;
     }
   }
 }
 
-.card__overlay {
+.overlay {
   position: absolute;
   right: 0;
   left: 0;
@@ -42,15 +42,15 @@
   width: 100%;
   height: 100%;
   background: $overlay-card;
-  z-index: 1;
   border-radius: 50px;
+  z-index: 1;
 
   @include vp-767 {
     border-radius: 20px;
   }
 }
 
-.card__title {
+.title {
   font-size: 3.5rem;
   font-weight: 500;
   line-height: 122%;
@@ -64,42 +64,42 @@
   }
 }
 
-.card__image {
+.image {
   position: absolute;
   left: 0;
   top: 0;
-  height: 100%;
   width: 100%;
+  height: 100%;
   border-radius: 50px;
-  object-fit: cover;
   transform: scale(1);
   transition: transform 0.3s ease;
+  object-fit: cover;
 
   @include vp-767 {
     border-radius: 20px;
   }
 }
 
-.card__text {
+.text {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
   z-index: 10;
 }
 
-.card__description {
+.description {
   color: $color-default-white;
 }
 
-.card__footer {
+.footer {
   position: relative;
-  z-index: 12;
-  margin-top: auto;
   display: flex;
   justify-content: space-between;
+  margin-top: auto;
+  z-index: 12;
 }
 
-.card__link {
+.link {
   display: inline-flex;
   align-items: center;
   gap: 15px;
@@ -108,15 +108,15 @@
   font-weight: 700;
   line-height: 122%;
   border-radius: 50px;
-  color: var(--white);
+  color: $color-default-white;
   background-color: transparent;
-  cursor: pointer;
   transform: translateX(-20px);
+  cursor: pointer;
   outline: 0;
 
   @include vp-767 {
     font-size: 1.6rem;
-    line-height: 142%; /* 22.72px */
+    line-height: 142%;
   }
 
   &:focus-visible {
@@ -129,7 +129,7 @@
 }
 
 
-.card__social {
+.social {
   display: flex;
   gap: 35px;
   align-items: center;
@@ -137,22 +137,97 @@
   @include vp-767 {
     display: none;
   }
+
+  &_link {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 142%;
+    color: $color-default-white;
+    outline: 0;
+
+    @include hover-focus {
+      text-decoration: underline;
+    }
+
+    @include active {
+      color: $color-orange200;
+    }
+  }
 }
 
 
-.social_link {
+.cardChoose {
+  padding: 50px;
+  padding-bottom: 41px;
+  min-height: 531px;
+
+  @include vp-767 {
+    min-height: 318px;
+    padding: 25px;
+    padding-bottom: 20px;
+  }
+}
+
+.descriptionChoose {
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 142%;
+  letter-spacing: -0.17px;
+  margin: 0;
+
+  @include vp-767 {
+    font-size: 1.6rem;
+    letter-spacing: -0.16px;
+  }
+}
+
+.titleChoose {
+  padding-right: 3rem;
+  margin: 0;
+  margin-bottom: 16px;
+
+  @include vp-1279 {
+    margin-bottom: 14px;
+    padding-right: 0;
+  }
+}
+
+.cardStory {
+  padding: 60px;
+  padding-bottom: 51px;
+  min-height: 567px;
+
+  @include vp-767 {
+    min-height: 455px;
+    padding: 30px;
+    padding-bottom: 23px;
+  }
+}
+
+.descriptionStory {
   font-size: 2rem;
   font-weight: 400;
   line-height: 142%;
-  color: $color-default-white;
-  outline: 0;
+  margin: 0;
+  white-space: pre-wrap;
 
-
-  @include hover-focus {
-    text-decoration: underline;
+  @include vp-767 {
+    font-size: 1.6rem;
+    width: 99%;
   }
+}
 
-  @include active {
-    color: $color-orange200;
+.titleStory {
+  padding-right: 3rem;
+  margin: 0;
+  margin-bottom: 37px;
+
+  @include vp-767 {
+    margin-bottom: 23px;
+    padding-right: 100px;
   }
+}
+
+.cardText {
+  max-width: 554px;
 }

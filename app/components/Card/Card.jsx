@@ -4,31 +4,44 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './card.module.scss';
-export default function Card({ info, cN, width, height, path = '/' }) {
+import cx from "classnames";
+export default function Card({ info, width, classNames, height, path = '/', isCardChoose, isCardStory,}) {
   return (
-    <article className={`${cN.card} ${styles.card}`}>
-      <div className={`${cN.card__text} ${styles.card__text}`}>
-        <h3 className={`${cN.title} ${styles.card__title}`}>{info.title}</h3>
-        <p className={`${cN.description} ${styles.card__description}`}>
+    <article className={cx(styles.card,
+      {[styles.cardChoose]: isCardChoose,
+      [styles.cardStory]: isCardStory})
+    }
+    >
+      <div className={cx(styles.text,
+        {[styles.cardText]: isCardStory})
+      }
+      >
+        <h3 className={cx(styles.title, {[styles.titleChoose]: isCardChoose,
+          [styles.titleStory]: isCardStory})}>
+          {info.title}
+        </h3>
+        <p className={cx(styles.description, {[styles.descriptionChoose]: isCardChoose,
+          [styles.descriptionStory]: isCardStory})}
+        >
           {info.price ? 'от 80 000 руб' : info.description}
         </p>
       </div>
       <Image
-        className={styles.card__image}
+        className={styles.image}
         src={info.img}
         loading="lazy"
         alt=""
         width={width}
         height={height}
       />
-      <div className={styles.card__footer}>
-        <Link className={styles.card__link} href={path}>
+      <div className={styles.footer}>
+        <Link className={styles.link} href={path}>
           Подробнее
           <FontAwesomeIcon icon={faArrowRight} />
         </Link>
 
         {info.social && (
-          <div className={styles.card__social}>
+          <div className={styles.social}>
             {info.social.map((item) => {
               return (
                 <a
@@ -43,7 +56,7 @@ export default function Card({ info, cN, width, height, path = '/' }) {
           </div>
         )}
       </div>
-      <div className={styles.card__overlay}></div>
+      <div className={styles.overlay}></div>
     </article>
   );
 }
