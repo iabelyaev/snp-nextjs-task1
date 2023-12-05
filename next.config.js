@@ -4,6 +4,7 @@ const nextConfig = {
   sassOptions: {
     prependData: `
       @import "app/styles/mixins.scss";
+      @import "app/styles/variables.scss";
       `,
   },
 };

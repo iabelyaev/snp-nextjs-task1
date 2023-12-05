@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     padding: 29px 0;
-    color: var(--white);
+    color: $color-default-white;
 
     @include vp-767 {
       padding: 33px 0;
@@ -31,11 +31,11 @@
 .header__sticky {
   position: fixed;
   z-index: 11;
-  background: rgba(243, 239, 232, 0.60);
+  background: $bg-header-sticky;
   backdrop-filter: blur(27px);
 
   .header__wrapper {
-    color: var(--black);
+    color: $color-black;
   }
 }
 
@@ -89,7 +89,7 @@
     height: 1px;
     left: 0;
     bottom: 0;
-    background-color: var(--white);
+    background-color: $color-default-white;
     transition: width 0.3s ease;
   }
 
