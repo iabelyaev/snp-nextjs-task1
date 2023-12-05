@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Card from 'components/Card/Card';
 import Container from "components/Container/Container";
-import { chooseCards } from '../../../utils/mock';
+import {chooseCards} from "stubs/choose";
 
 import styles from './choose-tour.module.scss';
 export default function ChooseTour() {

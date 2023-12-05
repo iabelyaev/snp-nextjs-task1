@@ -1,4 +1,5 @@
 import styles from './title.module.scss';
+import PropTypes from "prop-types";
 export default function Title({ title, isWrap, className }) {
   return (
     <div className={`${styles.wrapper} ${className ? className : ''}`}>
@@ -9,4 +10,10 @@ export default function Title({ title, isWrap, className }) {
       </p>
     </div>
   );
+}
+
+Title.propTypes = {
+  title: PropTypes.string,
+  isWrap: PropTypes.bool,
+  className: PropTypes.string
 }

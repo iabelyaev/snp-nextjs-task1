@@ -3,7 +3,7 @@ import {useState, useEffect} from "react";
 import cx from 'classnames'
 import Image from 'next/image';
 import Link from 'next/link';
-import { navLinks } from '../../utils/mock';
+import {navigation} from "stubs/navigation";
 
 import styles from './header.module.scss';
 
@@ -48,7 +48,7 @@ export default function Header() {
           </a>
           <nav className={styles.nav}>
             <ul className={styles.list}>
-              {navLinks.map((link) =>
+              {navigation.map((link) =>
                   <li key={link.text}>
                     <Link className={styles.link} href={link.path}>
                       {link.text}

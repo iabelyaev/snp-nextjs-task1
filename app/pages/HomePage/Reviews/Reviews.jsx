@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Title from 'components/Title/Title';
-import { reviewCards } from '../../../utils/mock';
+import {reviews} from "stubs/reviews";
 import Container from "components/Container/Container";
 
 import styles from './reviews.module.scss';
@@ -14,7 +14,7 @@ export default function Reviews() {
         />
 
         <div className={styles.list}>
-            {reviewCards.map((card, index) => {
+            {reviews.map((card, index) => {
               return (
                 <article className={styles.card} key={index}>
                   <p className={styles.reviewsText}>{card.text}</p>

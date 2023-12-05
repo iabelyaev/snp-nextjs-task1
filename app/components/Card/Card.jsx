@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from "prop-types";
 
 import styles from './card.module.scss';
 import cx from "classnames";
-export default function Card({ info, width, classNames, height, path = '/', isCardChoose, isCardStory,}) {
+import Button from "components/Button/Button";
+export default function Card({ info, width, height, path = '/', isCardChoose, isCardStory,}) {
   return (
     <article className={cx(styles.card,
       {[styles.cardChoose]: isCardChoose,
@@ -35,10 +35,9 @@ export default function Card({ info, width, classNames, height, path = '/', isCa
         height={height}
       />
       <div className={styles.footer}>
-        <Link className={styles.link} href={path}>
+        <Button href='/' icon={faArrowRight}>
           Подробнее
-          <FontAwesomeIcon icon={faArrowRight} />
-        </Link>
+        </Button>
 
         {info.social && (
           <div className={styles.social}>
@@ -59,4 +58,13 @@ export default function Card({ info, width, classNames, height, path = '/', isCa
       <div className={styles.overlay}></div>
     </article>
   );
+}
+
+Card.propTypes = {
+  info: PropTypes.object,
+  width: PropTypes.node,
+  height: PropTypes.node,
+  path: PropTypes.string,
+  isCardChoose: PropTypes.bool,
+  isCardStory: PropTypes.bool
 }

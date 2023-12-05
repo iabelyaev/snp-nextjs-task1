@@ -2,7 +2,8 @@ import Image from 'next/image';
 import Title from 'components/Title/Title';
 import styles from './gallery.module.scss';
 
-import { galleryPhotos } from '../../../utils/mock';
+import {gallery} from "stubs/gallery";
+
 export default function Gallery() {
   return (
     <section className={styles.gallery} id='#gallery'>
@@ -13,7 +14,7 @@ export default function Gallery() {
         />
         <div
           className={`${styles.gallery__list} ${styles.gallery__list__first}`}>
-          {galleryPhotos
+          {gallery
             .map((picture) => {
               return (
                 <Image
@@ -29,7 +30,7 @@ export default function Gallery() {
         </div>
         <div
           className={`${styles.gallery__list} ${styles.gallery__list__second}`}>
-          {galleryPhotos
+          {gallery
             .map((picture) => {
               return (
                 <Image
@@ -45,7 +46,7 @@ export default function Gallery() {
         </div>
         <div
           className={`${styles.gallery__list} ${styles.gallery__list__three}`}>
-          {galleryPhotos
+          {gallery
             .map((picture) => {
               return (
                 <Image

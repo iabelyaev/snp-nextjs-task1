@@ -3,7 +3,8 @@ import Title from 'components/Title/Title';
 import styles from './stories.module.scss';
 import Container from "components/Container/Container";
 
-import { storiesCard } from '../../../utils/mock';
+import {storiesCard} from "stubs/stories";
+
 export default function Stories() {
   return (
     <section className={styles.stories} id="story">

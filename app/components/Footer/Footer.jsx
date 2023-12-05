@@ -1,6 +1,6 @@
 import styles from './footer.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { socials } from '../../utils/mock';
+import {socials} from "stubs/socials";
 import Container from "components/Container/Container";
 export default function Footer() {
   return (
