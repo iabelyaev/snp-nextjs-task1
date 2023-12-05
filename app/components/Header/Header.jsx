@@ -11,9 +11,7 @@ export default function Header() {
   const [isWindowScrollPosition, setIsWindowScrollPosition] = useState(0);
 
   function handlerScrollWindow () {
-    if (typeof window !== undefined) {
-      setIsWindowScrollPosition(window.scrollY)
-    }
+    setIsWindowScrollPosition(window.scrollY)
   }
 
   useEffect(() => {
