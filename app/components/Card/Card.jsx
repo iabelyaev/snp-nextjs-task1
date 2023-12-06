@@ -5,7 +5,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import Button from "components/Button/Button";
 
-import styles from './card.module.scss';
+import styles from './Card.module.scss';
 
 const Card = (
   { info,

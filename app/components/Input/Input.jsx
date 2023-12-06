@@ -2,7 +2,7 @@
 import InputMask from 'react-input-mask';
 import PropTypes from "prop-types";
 
-import styles from './input.module.scss';
+import styles from './Input.module.scss';
 
 const Input = (props) => {
   const { title, ...rest } = props;

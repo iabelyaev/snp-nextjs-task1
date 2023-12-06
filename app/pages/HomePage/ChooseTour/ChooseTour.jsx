@@ -6,7 +6,7 @@ import {chooseCards} from "stubs/choose";
 import Card from 'components/Card/Card';
 import Container from "components/Container/Container";
 
-import styles from './choose-tour.module.scss';
+import styles from './Choose-tour.module.scss';
 
 const ChooseTour = () => {
   const [activeTab, setActiveTab] = useState('popular');

@@ -4,7 +4,7 @@ import Card from 'components/Card/Card';
 import Title from 'components/Title/Title';
 import Container from "components/Container/Container";
 
-import styles from './stories.module.scss';
+import styles from './Stories.module.scss';
 
 const Stories = () => {
   return (

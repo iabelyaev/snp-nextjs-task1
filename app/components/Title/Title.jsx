@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-import styles from './title.module.scss';
+import styles from './Title.module.scss';
 
 const Title = ({ title, isWrap, className }) => {
   return (

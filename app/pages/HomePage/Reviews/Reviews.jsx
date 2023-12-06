@@ -5,7 +5,7 @@ import {reviews} from "stubs/reviews";
 import Title from 'components/Title/Title';
 import Container from "components/Container/Container";
 
-import styles from './reviews.module.scss';
+import styles from './Reviews.module.scss';
 
 const Reviews = () => {
   return (

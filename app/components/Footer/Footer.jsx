@@ -4,7 +4,7 @@ import {socials} from "stubs/socials";
 
 import Container from "components/Container/Container";
 
-import styles from './footer.module.scss';
+import styles from './Footer.module.scss';
 
 const Footer = () => {
   return (

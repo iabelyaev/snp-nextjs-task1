@@ -4,7 +4,7 @@ import {gallery} from "stubs/gallery";
 
 import Title from 'components/Title/Title';
 
-import styles from './gallery.module.scss';
+import styles from './Gallery.module.scss';
 
 const Gallery = () => {
   return (

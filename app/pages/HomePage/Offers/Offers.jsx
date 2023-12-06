@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import Container from "components/Container/Container";
 
-import styles from './offers.module.scss';
+import styles from './Offers.module.scss';
 
 const Offers = () => {
   return (
