@@ -33,7 +33,7 @@
   position: fixed;
   background: $bg-header-sticky;
   backdrop-filter: blur(27px);
-  z-index: 11;
+  z-index: 99;
 
   .wrapper {
     color: $color-black;

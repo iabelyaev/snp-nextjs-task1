@@ -44,7 +44,7 @@ const Card = ({
         height={height}
       />
       <div className={styles.footer}>
-        <Button href={path} icon={faArrowRight}>
+        <Button href={path} className={styles.link} icon={faArrowRight}>
           Подробнее
         </Button>
 
