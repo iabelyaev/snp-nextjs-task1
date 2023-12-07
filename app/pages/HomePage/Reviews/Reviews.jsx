@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import {reviews} from "stubs/reviews";
 
 import Title from 'components/Title/Title';

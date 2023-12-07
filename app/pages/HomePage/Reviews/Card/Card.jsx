@@ -1,7 +1,7 @@
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 
 import styles from './Card.module.scss';
-import PropTypes from 'prop-types';
 
 const Card = ({text, author, title, img}) => {
   return (

@@ -1,4 +1,5 @@
 'use client';
+
 import InputMask from 'react-input-mask';
 import PropTypes from "prop-types";
 
