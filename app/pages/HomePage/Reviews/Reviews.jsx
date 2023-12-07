@@ -19,7 +19,12 @@ const Reviews = () => {
         <ul className={styles.list}>
             {reviews.map((card, index) =>
               <li key={index}>
-                <Card text={card.text} author={card.userInfo.author} title={card.userInfo.titleTour} img={card.userInfo.img} />
+                <Card
+                  text={card.text}
+                  author={card.userInfo.author}
+                  title={card.userInfo.titleTour}
+                  img={card.userInfo.img}
+                />
               </li>
             )}
         </ul>
