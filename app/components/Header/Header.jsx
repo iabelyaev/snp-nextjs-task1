@@ -33,8 +33,6 @@ const Header = () => {
 
   }, [isWindowScrollPosition])
 
-
-
   return (
     <header className={cx(styles.header, {[styles.sticky]: isHeaderSticky})}>
       <div className={styles.container}>

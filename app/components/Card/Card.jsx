@@ -7,8 +7,8 @@ import Button from "components/Button/Button";
 
 import styles from './Card.module.scss';
 
-const Card = (
-  { info,
+const Card = ({
+    info,
     width,
     height,
     path = '/',

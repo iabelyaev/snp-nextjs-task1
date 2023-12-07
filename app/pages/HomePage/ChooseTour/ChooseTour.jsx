@@ -1,4 +1,5 @@
 'use client';
+
 import { useState } from 'react';
 
 import {chooseCards} from "stubs/choose";
