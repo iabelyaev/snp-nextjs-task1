@@ -31,7 +31,8 @@
   margin-bottom: 30px;
 
   @include vp-1279 {
-    gap: 33px 20px;
+    gap: 20px;
+    row-gap: 33px;
     margin-bottom: 33px;
   }
 

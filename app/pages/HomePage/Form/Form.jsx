@@ -5,6 +5,7 @@ import Title from 'components/Title/Title';
 import Input from 'components/Input/Input';
 
 import styles from './Form.module.scss';
+
 const Form = () => {
   return (
     <section className={styles.form_block} id="form">
