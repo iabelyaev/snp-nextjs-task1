@@ -12,17 +12,18 @@ const Stories = () => {
       <Container>
         <Title title="Истории путешествий" className={styles.wrapperTitle} />
 
-        <div className={styles.list}>
+        <ul className={styles.list}>
           {storiesCard.map((card, index) =>
+            <li key={index}>
               <Card
                 isCardStory
                 info={card}
                 width={1170}
                 height={567}
-                key={index}
               />
+            </li>
           )}
-        </div>
+        </ul>
       </Container>
     </section>
   );

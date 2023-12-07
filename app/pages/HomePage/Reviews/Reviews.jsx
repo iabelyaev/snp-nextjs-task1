@@ -5,6 +5,8 @@ import {reviews} from "stubs/reviews";
 import Title from 'components/Title/Title';
 import Container from "components/Container/Container";
 
+import Card from './Card/Card';
+
 import styles from './Reviews.module.scss';
 
 const Reviews = () => {
@@ -16,26 +18,13 @@ const Reviews = () => {
             title={`Отзывы нашиx\nпутешественников`}
         />
 
-        <div className={styles.list}>
-            {reviews.map((card, index) => {
-              return (
-                <article className={styles.card} key={index}>
-                  <p className={styles.reviewsText}>{card.text}</p>
-
-                  <div className={styles.reviewsFooter}>
-                    <h3>{card.userInfo.author}</h3>
-                    <p>Тур: {card.userInfo.titleTour}</p>
-                    <Image
-                      src={card.userInfo.img}
-                      alt={card.userInfo.author}
-                      width={75}
-                      height={75}
-                    />
-                  </div>
-                </article>
-              );
-            })}
-          </div>
+        <ul className={styles.list}>
+            {reviews.map((card, index) =>
+              <li key={index}>
+                <Card text={card.text} author={card.userInfo.author} title={card.userInfo.titleTour} img={card.userInfo.img} />
+              </li>
+            )}
+        </ul>
       </Container>
     </section>
   );
