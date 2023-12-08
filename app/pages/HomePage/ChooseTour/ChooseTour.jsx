@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import {chooseCards} from "stubs/choose";
+import { chooseCards } from "stubs/choose";
 
 import Card from 'components/Card/Card';
 import Container from "components/Container/Container";

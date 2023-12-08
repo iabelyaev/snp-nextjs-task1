@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import cx from "classnames";
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-import Button from "components/Button/Button";
+import Button from 'components/Button/Button';
 
 import styles from './Card.module.scss';
 
@@ -15,6 +15,7 @@ const Card = ({
     isCardChoose,
     isCardStory
   }) => {
+
   return (
     <article className={cx(styles.card,
       {[styles.cardChoose]: isCardChoose,
