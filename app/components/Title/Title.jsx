@@ -3,7 +3,8 @@ import cx from 'classnames'
 
 import s from './Title.module.scss';
 
-const Title = ({ title, isWrap, className }) =>
+const Title = ({ title, isWrap, className }) => {
+  return (
     <div className={cx(s.wrapper, className)}>
       <h2 className={s.title}>{title}</h2>
       <p className={s.subtitle}>
@@ -11,6 +12,9 @@ const Title = ({ title, isWrap, className }) =>
         рамки и место обучения кадров
       </p>
     </div>
+  );
+}
+
 
 Title.propTypes = {
   title: string,

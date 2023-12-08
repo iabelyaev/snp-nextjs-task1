@@ -14,7 +14,6 @@ const Card = ({
     height,
     path = '/',
   }) => {
-
   return (
     <article className={cx(s.card, className)}>
       <div className={cx(s.text)}>

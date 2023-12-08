@@ -2,7 +2,9 @@ import { node } from "prop-types";
 
 import s from './Container.module.scss'
 
-const Container = ({ children }) => <div className={s.container}>{children}</div>
+const Container = ({ children }) => {
+  return <div className={s.container}>{children}</div>;
+}
 
 
 Container.propTypes = {
