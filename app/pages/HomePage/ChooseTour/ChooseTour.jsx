@@ -4,8 +4,8 @@ import { useState } from 'react';
 
 import { chooseCards } from "stubs/choose";
 
-import Card from 'components/Card/Card';
-import Container from "components/Container/Container";
+import Card from 'components/Card';
+import Container from 'components/Container';
 
 import styles from './Choose-tour.module.scss';
 
@@ -70,6 +70,7 @@ const ChooseTour = () => {
                   width={370}
                   height={531}
                   key={index}
+                  className={styles.card}
                 />
               </li>
           )}

@@ -1,23 +1,20 @@
-import PropTypes from "prop-types";
+import {string, bool} from "prop-types";
 
-import styles from './Title.module.scss';
+import s from './Title.module.scss';
 
-const Title = ({ title, isWrap, className }) => {
-  return (
-    <div className={`${styles.wrapper} ${className ? className : ''}`}>
-      <h2 className={styles.title}>{title}</h2>
-      <p className={styles.subtitle}>
+const Title = ({ title, isWrap, className }) =>
+    <div className={`${s.wrapper} ${className ? className : ''}`}>
+      <h2 className={s.title}>{title}</h2>
+      <p className={s.subtitle}>
         Идейные соображения высшего порядка, {isWrap ? '\na' : 'a\n'} также
         рамки и место обучения кадров
       </p>
     </div>
-  );
-}
 
 Title.propTypes = {
-  title: PropTypes.string,
-  isWrap: PropTypes.bool,
-  className: PropTypes.string
+  title: string,
+  isWrap: bool,
+  className: string
 }
 
 export default Title;

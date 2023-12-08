@@ -1,8 +1,8 @@
 import {storiesCard} from "stubs/stories";
 
-import Card from 'components/Card/Card';
-import Title from 'components/Title/Title';
-import Container from "components/Container/Container";
+import Card from 'components/Card';
+import Title from 'components/Title';
+import Container from 'components/Container';
 
 import styles from './Stories.module.scss';
 
@@ -16,7 +16,7 @@ const Stories = () => {
           {storiesCard.map((card, index) =>
             <li key={index}>
               <Card
-                isCardStory
+                className={styles.card}
                 info={card}
                 width={1170}
                 height={567}

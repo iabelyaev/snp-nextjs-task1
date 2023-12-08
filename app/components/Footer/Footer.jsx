@@ -2,21 +2,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import {socials} from "stubs/socials";
 
-import Container from "components/Container/Container";
+import Container from 'components/Container';
 
-import styles from './Footer.module.scss';
+import s from './Footer.module.scss';
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={s.footer}>
       <Container>
-        <div className={styles.wrapper}>
-          <p className={styles.description}>Наши социальные сети</p>
+        <div className={s.wrapper}>
+          <p className={s.description}>Наши социальные сети</p>
 
-          <ul className={styles.list}>
+          <ul className={s.list}>
             {socials.map((item) =>
               <li key={item.name}>
-                <a href={item.link} className={styles.link}>
+                <a href={item.link} className={s.link}>
                   <FontAwesomeIcon
                     icon={[
                       item.fontawesome.prefix || 'fa',

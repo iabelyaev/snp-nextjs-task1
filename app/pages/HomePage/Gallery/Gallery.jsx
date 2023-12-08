@@ -3,7 +3,7 @@ import cx from 'classnames'
 
 import {gallery} from "stubs/gallery";
 
-import Title from 'components/Title/Title';
+import Title from 'components/Title';
 
 import styles from './Gallery.module.scss';
 

@@ -1,8 +1,8 @@
 import cx from 'classnames'
 
-import Container from "components/Container/Container";
-import Title from 'components/Title/Title';
-import Input from 'components/Input/Input';
+import Container from 'components/Container';
+import Title from 'components/Title';
+import Input from 'components/Input';
 
 import styles from './Form.module.scss';
 

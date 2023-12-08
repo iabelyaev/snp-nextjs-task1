@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import Container from "components/Container/Container";
+import Container from 'components/Container';
 
 import styles from './Offers.module.scss';
 

@@ -1,4 +1,4 @@
-import Container from "components/Container/Container";
+import Container from 'components/Container';
 
 import styles from './Hero.module.scss';
 const Hero = () => {

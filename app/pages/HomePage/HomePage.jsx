@@ -1,10 +1,10 @@
-import Hero from './Hero/Hero';
-import ChooseTour from './ChooseTour/ChooseTour';
-import Form from './Form/Form';
-import Reviews from './Reviews/Reviews';
-import Gallery from './Gallery/Gallery';
-import Stories from './Stories/Stories';
-import Offers from './Offers/Offers';
+import Hero from './Hero';
+import ChooseTour from './ChooseTour';
+import Form from './Form';
+import Reviews from './Reviews';
+import Gallery from './Gallery';
+import Stories from './Stories';
+import Offers from './Offers';
 
 const HomePage = () => {
   return (

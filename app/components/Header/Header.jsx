@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import {navigation} from "stubs/navigation";
 
-import styles from './Header.module.scss';
+import s from './Header.module.scss';
 
 const Header = () => {
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
@@ -34,30 +34,30 @@ const Header = () => {
   }, [isWindowScrollPosition])
 
   return (
-    <header className={cx(styles.header, {[styles.sticky]: isHeaderSticky})}>
-      <div className={styles.container}>
-        <div className={styles.wrapper}>
+    <header className={cx(s.header, {[s.sticky]: isHeaderSticky})}>
+      <div className={s.container}>
+        <div className={s.wrapper}>
           <a href="/">
             <Image
-              className={styles.logo}
+              className={s.logo}
               src="/images/logotype.svg"
               width={182}
               height={31}
               alt="Логотип сайта."
             />
           </a>
-          <nav className={styles.nav}>
-            <ul className={styles.list}>
+          <nav className={s.nav}>
+            <ul className={s.list}>
               {navigation.map((link) =>
                   <li key={link.text}>
-                    <Link className={styles.link} href={link.path}>
+                    <Link className={s.link} href={link.path}>
                       {link.text}
                     </Link>
                   </li>
               )}
             </ul>
           </nav>
-          <a className={styles.link} href="tel:+79999999999">
+          <a className={s.link} href="tel:+79999999999">
             +7 999 999 99 99
           </a>
         </div>

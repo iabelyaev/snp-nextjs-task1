@@ -1,9 +1,9 @@
 import {reviews} from "stubs/reviews";
 
-import Title from 'components/Title/Title';
-import Container from "components/Container/Container";
+import Title from 'components/Title';
+import Container from 'components/Container';
 
-import Card from './Card/Card';
+import Card from './Card';
 
 import styles from './Reviews.module.scss';
 
