@@ -1,9 +1,10 @@
 import {string, bool} from "prop-types";
+import cx from 'classnames'
 
 import s from './Title.module.scss';
 
 const Title = ({ title, isWrap, className }) =>
-    <div className={`${s.wrapper} ${className ? className : ''}`}>
+    <div className={cx(s.wrapper, className)}>
       <h2 className={s.title}>{title}</h2>
       <p className={s.subtitle}>
         Идейные соображения высшего порядка, {isWrap ? '\na' : 'a\n'} также

@@ -5,18 +5,18 @@ import {gallery} from "stubs/gallery";
 
 import Title from 'components/Title';
 
-import styles from './Gallery.module.scss';
+import s from './Gallery.module.scss';
 
 const Gallery = () => {
   return (
-    <section className={styles.gallery} id='#gallery'>
-      <div className={styles.gallery__wrapper}>
+    <section className={s.gallery} id='#gallery'>
+      <div className={s.wrapperTitle}>
         <Title
-          className={styles.gallery__wrapper_title}
+          className={s.wrapper}
           title="Фотографии путешествий"
         />
         <div
-          className={cx(styles.gallery__list, styles.gallery__list__first)}>
+          className={cx(s.list, s.list__first)}>
           {gallery.slice(0,4).map((picture) =>
             <Image
               key={picture.title}
@@ -28,7 +28,7 @@ const Gallery = () => {
           )}
         </div>
         <div
-          className={cx(styles.gallery__list, styles.gallery__list__second)}>
+          className={cx(s.list, s.list__second)}>
           {gallery.slice(4, 9).map((picture) =>
               <Image
                 key={picture.title}
@@ -40,7 +40,7 @@ const Gallery = () => {
             )}
         </div>
         <div
-          className={cx(styles.gallery__list, styles.gallery__list__three)}>
+          className={cx(s.list, s.list__three)}>
           {gallery.slice(9).map((picture) =>
             <Image
               key={picture.title}
