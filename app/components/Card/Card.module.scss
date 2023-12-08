@@ -1,0 +1,203 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+
+  @include vp-767 {
+    border-radius: 20px;
+  }
+
+  &:hover {
+    .link {
+      background-color: $color-green400;
+    }
+
+    img {
+      transform: scale(1.2);
+    }
+  }
+
+  &:focus-within {
+    img {
+      transform: scale(1.2);
+    }
+  }
+
+  &:active {
+    .link {
+      background-color: $color-orange200;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: $overlay-card;
+  border-radius: 50px;
+
+  @include vp-767 {
+    border-radius: 20px;
+  }
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 122%;
+  color: $color-default-white;
+
+  @include vp-767 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.92px;
+  }
+}
+
+.image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+
+  @include vp-767 {
+    border-radius: 20px;
+  }
+}
+
+.text {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  color: $color-default-white;
+}
+
+.footer {
+  position: relative;
+  z-index: 12;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.social {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+
+  @include vp-767 {
+    display: none;
+  }
+
+  &_link {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 142%;
+    color: $color-default-white;
+    outline: 0;
+
+    @include hover-focus {
+      text-decoration: underline;
+    }
+
+    @include active {
+      color: $color-orange200;
+    }
+  }
+}
+
+
+.cardChoose {
+  padding: 50px;
+  padding-bottom: 41px;
+  min-height: 531px;
+
+  @include vp-767 {
+    padding: 25px;
+    padding-bottom: 20px;
+    min-height: 318px;
+  }
+}
+
+.descriptionChoose {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 142%;
+  letter-spacing: -0.17px;
+
+  @include vp-767 {
+    font-size: 1.6rem;
+    letter-spacing: -0.16px;
+  }
+}
+
+.titleChoose {
+  margin: 0;
+  margin-bottom: 16px;
+  padding-right: 3rem;
+
+  @include vp-1279 {
+    margin-bottom: 14px;
+    padding-right: 0;
+  }
+}
+
+.cardStory {
+  padding: 60px;
+  padding-bottom: 51px;
+  min-height: 567px;
+
+  @include vp-767 {
+    padding: 30px;
+    padding-bottom: 23px;
+    min-height: 455px;
+  }
+}
+
+.descriptionStory {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 142%;
+  margin: 0;
+  white-space: pre-wrap;
+
+  @include vp-767 {
+    font-size: 1.6rem;
+    width: 99%;
+  }
+}
+
+.titleStory {
+  margin: 0;
+  margin-bottom: 37px;
+  padding-right: 3rem;
+
+  @include vp-767 {
+    margin-bottom: 23px;
+    padding-right: 100px;
+  }
+}
+
+.cardText {
+  max-width: 554px;
+}

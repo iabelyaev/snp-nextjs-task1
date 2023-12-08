@@ -1,11 +1,13 @@
 import Image from 'next/image';
 
-import styles from './offers.module.scss';
+import Container from "components/Container/Container";
 
-export default function Offers() {
+import styles from './Offers.module.scss';
+
+const Offers = () => {
   return (
     <section className={styles.offers}>
-      <div className="container">
+      <Container>
         <div className={styles.offers__wrapper}>
           <div className={styles.offers__text}>
             <h2 className={styles.offers__title}>
@@ -23,7 +25,9 @@ export default function Offers() {
             height={370}
           />
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
+
+export default Offers;

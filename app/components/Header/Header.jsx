@@ -1,16 +1,19 @@
 'use client'
+
 import {useState, useEffect} from "react";
-import Image from 'next/image';
 import Link from 'next/link';
-import { navLinks } from '../../utils/mock';
+import Image from 'next/image';
+import cx from 'classnames'
 
-import styles from './header.module.scss';
+import {navigation} from "stubs/navigation";
 
-export default function Header() {
+import styles from './Header.module.scss';
+
+const Header = () => {
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
   const [isWindowScrollPosition, setIsWindowScrollPosition] = useState(0);
 
-  function handlerScrollWindow () {
+  const handlerScrollWindow = () => {
     setIsWindowScrollPosition(window.scrollY)
   }
 
@@ -23,41 +26,38 @@ export default function Header() {
 
     window.addEventListener('scroll', handlerScrollWindow)
 
+
+    return () => {
+      window.removeEventListener('scroll', handlerScrollWindow)
+    }
+
   }, [isWindowScrollPosition])
 
-  function getHeaderSticky ()  {
-    const cN = styles.header;
-
-    return isHeaderSticky ? `${cN} ${styles.header__sticky}` : cN;
-  }
-
   return (
-    <header className={getHeaderSticky()}>
-      <div className={styles.header__container}>
-        <div className={styles.header__wrapper}>
+    <header className={cx(styles.header, {[styles.sticky]: isHeaderSticky})}>
+      <div className={styles.container}>
+        <div className={styles.wrapper}>
           <a href="/">
             <Image
-              className={styles.header__logo}
+              className={styles.logo}
               src="/images/logotype.svg"
               width={182}
               height={31}
               alt="Логотип сайта."
             />
           </a>
-          <nav className={styles.header__nav}>
-            <ul className={styles.header__list}>
-              {navLinks.map((link) => {
-                return (
+          <nav className={styles.nav}>
+            <ul className={styles.list}>
+              {navigation.map((link) =>
                   <li key={link.text}>
-                    <Link className={styles.header__link} href={link.path}>
+                    <Link className={styles.link} href={link.path}>
                       {link.text}
                     </Link>
                   </li>
-                );
-              })}
+              )}
             </ul>
           </nav>
-          <a className={styles.header__link} href="tel:+79999999999">
+          <a className={styles.link} href="tel:+79999999999">
             +7 999 999 99 99
           </a>
         </div>
@@ -65,3 +65,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;

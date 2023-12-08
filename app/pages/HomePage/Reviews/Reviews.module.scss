@@ -1,0 +1,30 @@
+.reviews {
+  padding-bottom: 13.5rem;
+
+  @include vp-767 {
+    padding-bottom: 7.5rem;
+  }
+}
+
+.wrapper {
+  @include vp-767 {
+    margin-bottom: 50px;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include vp-1279 {
+    gap: 18px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}

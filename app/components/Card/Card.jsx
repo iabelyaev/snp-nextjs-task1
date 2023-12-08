@@ -1,34 +1,56 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from "prop-types";
+import cx from "classnames";
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-import styles from './card.module.scss';
-export default function Card({ info, cN, width, height, path = '/' }) {
+import Button from 'components/Button/Button';
+
+import styles from './Card.module.scss';
+
+const Card = ({
+    info,
+    width,
+    height,
+    path = '/',
+    isCardChoose,
+    isCardStory
+  }) => {
+
   return (
-    <article className={`${cN.card} ${styles.card}`}>
-      <div className={`${cN.card__text} ${styles.card__text}`}>
-        <h3 className={`${cN.title} ${styles.card__title}`}>{info.title}</h3>
-        <p className={`${cN.description} ${styles.card__description}`}>
+    <article className={cx(styles.card,
+      {[styles.cardChoose]: isCardChoose,
+      [styles.cardStory]: isCardStory})
+    }
+    >
+      <div className={cx(styles.text,
+        {[styles.cardText]: isCardStory})
+      }
+      >
+        <h3 className={cx(styles.title, {[styles.titleChoose]: isCardChoose,
+          [styles.titleStory]: isCardStory})}>
+          {info.title}
+        </h3>
+        <p className={cx(styles.description, {[styles.descriptionChoose]: isCardChoose,
+          [styles.descriptionStory]: isCardStory})}
+        >
           {info.price ? 'от 80 000 руб' : info.description}
         </p>
       </div>
       <Image
-        className={styles.card__image}
+        className={styles.image}
         src={info.img}
         loading="lazy"
         alt=""
         width={width}
         height={height}
       />
-      <div className={styles.card__footer}>
-        <Link className={styles.card__link} href={path}>
+      <div className={styles.footer}>
+        <Button href={path} className={styles.link} icon={faArrowRight}>
           Подробнее
-          <FontAwesomeIcon icon={faArrowRight} />
-        </Link>
+        </Button>
 
         {info.social && (
-          <div className={styles.card__social}>
+          <div className={styles.social}>
             {info.social.map((item) => {
               return (
                 <a
@@ -43,7 +65,18 @@ export default function Card({ info, cN, width, height, path = '/' }) {
           </div>
         )}
       </div>
-      <div className={styles.card__overlay}></div>
+      <div className={styles.overlay}></div>
     </article>
   );
 }
+
+Card.propTypes = {
+  info: PropTypes.object,
+  width: PropTypes.node,
+  height: PropTypes.node,
+  path: PropTypes.string,
+  isCardChoose: PropTypes.bool,
+  isCardStory: PropTypes.bool
+}
+
+export default Card;

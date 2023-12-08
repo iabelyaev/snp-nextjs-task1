@@ -1,29 +1,32 @@
+import {storiesCard} from "stubs/stories";
+
 import Card from 'components/Card/Card';
 import Title from 'components/Title/Title';
-import styles from './stories.module.scss';
-import cardStyle from './stories-card.module.scss';
+import Container from "components/Container/Container";
 
-import { storiesCard } from '../../../utils/mock';
-export default function Stories() {
+import styles from './Stories.module.scss';
+
+const Stories = () => {
   return (
     <section className={styles.stories} id="story">
-      <div className="container">
-        <Title title="Истории путешествий" cN={styles.stories__wrapper_title} />
+      <Container>
+        <Title title="Истории путешествий" className={styles.wrapperTitle} />
 
-        <div className={styles.stories__list}>
-          {storiesCard.map((card, index) => {
-            return (
+        <ul className={styles.list}>
+          {storiesCard.map((card, index) =>
+            <li key={index}>
               <Card
+                isCardStory
                 info={card}
                 width={1170}
                 height={567}
-                key={index}
-                cN={cardStyle}
               />
-            );
-          })}
-        </div>
-      </div>
+            </li>
+          )}
+        </ul>
+      </Container>
     </section>
   );
 }
+
+export default Stories;

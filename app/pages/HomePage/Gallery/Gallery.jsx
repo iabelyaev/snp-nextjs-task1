@@ -1,65 +1,59 @@
 import Image from 'next/image';
-import Title from 'components/Title/Title';
-import styles from './gallery.module.scss';
+import cx from 'classnames'
 
-import { galleryPhotos } from '../../../utils/mock';
-export default function Gallery() {
+import {gallery} from "stubs/gallery";
+
+import Title from 'components/Title/Title';
+
+import styles from './Gallery.module.scss';
+
+const Gallery = () => {
   return (
     <section className={styles.gallery} id='#gallery'>
       <div className={styles.gallery__wrapper}>
         <Title
-          cN={styles.gallery__wrapper_title}
+          className={styles.gallery__wrapper_title}
           title="Фотографии путешествий"
         />
         <div
-          className={`${styles.gallery__list} ${styles.gallery__list__first}`}>
-          {galleryPhotos
-            .map((picture) => {
-              return (
-                <Image
-                  key={picture.title}
-                  src={picture.img}
-                  alt={picture.title}
-                  width={442.5}
-                  height={301}
-                />
-              );
-            })
-            .slice(0, 4)}
+          className={cx(styles.gallery__list, styles.gallery__list__first)}>
+          {gallery.slice(0,4).map((picture) =>
+            <Image
+              key={picture.title}
+              src={picture.img}
+              alt={picture.title}
+              width={442.5}
+              height={301}
+            />
+          )}
         </div>
         <div
-          className={`${styles.gallery__list} ${styles.gallery__list__second}`}>
-          {galleryPhotos
-            .map((picture) => {
-              return (
-                <Image
-                  key={picture.title}
-                  src={picture.img}
-                  alt={picture.title}
-                  width={349.16}
-                  height={301}
-                />
-              );
-            })
-            .slice(4, 9)}
+          className={cx(styles.gallery__list, styles.gallery__list__second)}>
+          {gallery.slice(4, 9).map((picture) =>
+              <Image
+                key={picture.title}
+                src={picture.img}
+                alt={picture.title}
+                width={349.16}
+                height={301}
+              />
+            )}
         </div>
         <div
-          className={`${styles.gallery__list} ${styles.gallery__list__three}`}>
-          {galleryPhotos
-            .map((picture) => {
-              return (
-                <Image
-                  key={picture.title}
-                  src={picture.img}
-                  alt={picture.title}
-                  width={442.5}
-                  height={301}
-                />
-              );
-            })
-            .slice(9, 13)}
+          className={cx(styles.gallery__list, styles.gallery__list__three)}>
+          {gallery.slice(9).map((picture) =>
+            <Image
+              key={picture.title}
+              src={picture.img}
+              alt={picture.title}
+              width={442.5}
+              height={301}
+            />
+          )}
         </div>
       </div>
     </section>
   );
 }
+
+export default Gallery;

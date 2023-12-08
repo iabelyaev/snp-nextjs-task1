@@ -6,17 +6,20 @@
   }
 }
 
-.stories__list {
+.list {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
   @include vp-767 {
     gap: 20px;
   }
 }
 
-.stories__wrapper_title {
+.wrapperTitle {
   @include vp-767 {
     margin-bottom: 50px;
   }

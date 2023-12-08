@@ -1,3 +1,5 @@
+@import "variables";
+
 @mixin hover-focus {
   @media (hover: hover) {
     &:hover:not(.focus-visible) {
@@ -33,9 +35,6 @@
 }
 
 // Desktop first
-
-$vp-1280: 1280px;
-$vp-768: 768px;
 
 @mixin vp-1279 {
   @media (max-width: ($vp-1280 - 1px)) {

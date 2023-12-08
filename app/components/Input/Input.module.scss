@@ -7,7 +7,7 @@
     font-size: 2rem;
     font-weight: 400;
     line-height: 142%;
-    color: var(--black);
+    color: $color-black;
 
     @include vp-767 {
       font-size: 1.6rem;
@@ -15,16 +15,16 @@
   }
 }
 
-.form__filed {
-  border-radius: 10px;
-  border: 1px solid var(--beige200);
-  background-color: var(--beige100);
+.filed {
   padding: 20px;
   font-family: inherit;
   font-size: 20px;
   font-weight: 400;
   line-height: 142%;
-  color: var(--black);
+  color: $color-black;
+  border-radius: 10px;
+  border: 1px solid $color-beige200;
+  background-color: $color-beige100;
   outline: 0;
 
   @include vp-1279 {
@@ -38,16 +38,16 @@
   }
 
   @include hover {
-    background-color: var(--beige200);
+    background-color: $color-beige200;
   }
 
   &:focus {
-    border-color: var(--gray300);
-    background-color: var(--beige200);
+    border-color: $color-gray300;
+    background-color: $color-beige200;
   }
 }
 
-.form__filed[type='date'] {
+.filed[type='date'] {
   text-transform: uppercase;
   appearance: none;
   color: var(--black);
@@ -56,7 +56,7 @@
     color: var(--gray300);
   }
 }
-.form__filed[type="date"]::-webkit-calendar-picker-indicator {
+.filed[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
 

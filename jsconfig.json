@@ -4,7 +4,8 @@
     "paths": {
       "./*": ["./app/*"],
       "styles/*": ["styles/*"],
-      "components/*": ["components/*"]
+      "components/*": ["components/*"],
+      "stubs/*": ["stubs/*"]
     },
     "include": ["app"],
     "exclude": ["node_modules"]
