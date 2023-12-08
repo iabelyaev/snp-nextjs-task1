@@ -9,7 +9,6 @@ import {navigation} from "stubs/navigation";
 
 import styles from './Header.module.scss';
 
-
 const Header = () => {
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
   const [isWindowScrollPosition, setIsWindowScrollPosition] = useState(0);
