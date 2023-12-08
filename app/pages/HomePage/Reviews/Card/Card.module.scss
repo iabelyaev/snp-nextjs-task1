@@ -2,18 +2,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: $color-beige200;
-  padding: 40px;
-  border-radius: 50px;
   min-height: 673px;
+  padding: 40px;
+  background-color: $color-beige200;
+  border-radius: 50px;
 
   @include vp-1279 {
     min-height: 841px;
   }
 
   @include vp-767 {
-    padding: 20px;
     min-height: 408px;
+    padding: 20px;
     border-radius: 20px;
   }
 }
