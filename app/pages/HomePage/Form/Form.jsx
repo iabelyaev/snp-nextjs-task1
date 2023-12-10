@@ -1,35 +1,34 @@
-import cx from 'classnames'
+import cx from 'classnames';
 
 import Container from 'components/Container';
 import Title from 'components/Title';
 import Input from 'components/Input';
 
-import styles from './Form.module.scss';
+import s from './Form.module.scss';
 
 const Form = () => {
   return (
-    <section className={styles.form_block} id="form">
+    <section className={s.form_block} id="form">
       <Container>
-
         <Title title="Собери свой тур" isWrap />
 
         <form
-          className={styles.form}
+          className={s.form}
           action="https://echo.htmlacademy.ru/"
           method="post"
           id="form">
-          <div className={styles.form__list}>
+          <div className={s.form__list}>
             <Input
               title="Имя"
               type="text"
               placeholder="Введите Ваше имя"
               name="name"
             />
-            <label className={styles.form__label}>
+            <label className={s.form__label}>
               <span>Направление</span>
-              <div className={styles.form__label_select}>
+              <div className={s.form__label_select}>
                 <select
-                  className={`${styles.form__field} ${styles.form__select}`}
+                  className={cx(s.form__field, s.form__select)}
                   required
                   defaultValue="">
                   <option disabled value="" hidden>
@@ -69,63 +68,60 @@ const Form = () => {
               placeholder="ДД.ММ.ГГГГ"
             />
           </div>
-          <div className={styles.form__comment}>
-            <label className={styles.form__label}>
+          <div className={s.form__comment}>
+            <label className={s.form__label}>
               <span>Комментарий</span>
-              <textarea
-                className={`${styles.form__field} ${styles.form__textarea}`}
-              />
+              <textarea className={cx(s.form__field, s.form__textarea)} />
             </label>
           </div>
-          <fieldset className={styles.faq}>
-            <legend className={styles.legend}>Вам есть 18 лет?</legend>
-            <div className={styles.radiobox}>
-              <label className={styles.item}>
+          <fieldset className={s.faq}>
+            <legend className={s.legend}>Вам есть 18 лет?</legend>
+            <div className={s.radiobox}>
+              <label className={s.item}>
                 <input
-                  className={cx(styles.control, 'visually_hidden')}
+                  className={cx(s.control, 'visually_hidden')}
                   type="radio"
                   name="type"
                   required
                 />
                 <span></span>
-                <span className={styles.controlTitle}>Да</span>
+                <span className={s.controlTitle}>Да</span>
               </label>
-              <label className={styles.item}>
+              <label className={s.item}>
                 <input
-                  className={cx(styles.control, 'visually_hidden')}
+                  className={cx(s.control, 'visually_hidden')}
                   type="radio"
                   name="type"
                   required
                 />
                 <span></span>
-                <span className={styles.controlTitle}>Нет</span>
+                <span className={s.controlTitle}>Нет</span>
               </label>
             </div>
           </fieldset>
-          <fieldset className={styles.faq}>
-            <label
-              className={cx(styles.item, {[styles.item_checkbox]: true})}>
+          <fieldset className={s.faq}>
+            <label className={cx(s.item, { [s.item_checkbox]: true })}>
               <input
-                className={cx(styles.control, 'visually_hidden')}
+                className={cx(s.control, 'visually_hidden')}
                 type="checkbox"
                 name="yes"
                 required
               />
               <span></span>
-              <span className={styles.checkboxText}>
+              <span className={s.checkboxText}>
                 Нажимая кнопку, я принимаю условия{' '}
                 <a href="/">Лицензионного договора</a>
               </span>
             </label>
           </fieldset>
-          <div className={styles.buttons}>
+          <div className={s.buttons}>
             <button
-              className={cx(styles.button, {[styles.primary]: true})}
+              className={cx(s.button, { [s.primary]: true })}
               type="submit">
               Найти тур
             </button>
             <button
-              className={cx(styles.button, {[styles.secondary]: true})}
+              className={cx(s.button, { [s.secondary]: true })}
               type="reset">
               Сбросить
             </button>
@@ -134,6 +130,6 @@ const Form = () => {
       </Container>
     </section>
   );
-}
+};
 
 export default Form;

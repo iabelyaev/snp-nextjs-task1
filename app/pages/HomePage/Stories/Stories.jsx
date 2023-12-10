@@ -1,32 +1,27 @@
-import {storiesCard} from "stubs/stories";
+import { storiesCard } from 'stubs/stories';
 
 import Card from 'components/Card';
 import Title from 'components/Title';
 import Container from 'components/Container';
 
-import styles from './Stories.module.scss';
+import s from './Stories.module.scss';
 
 const Stories = () => {
   return (
-    <section className={styles.stories} id="story">
+    <section className={s.stories} id="story">
       <Container>
-        <Title title="Истории путешествий" className={styles.wrapperTitle} />
+        <Title title="Истории путешествий" className={s.wrapperTitle} />
 
-        <ul className={styles.list}>
-          {storiesCard.map((card, index) =>
+        <ul className={s.list}>
+          {storiesCard.map((card, index) => (
             <li key={index}>
-              <Card
-                className={styles.card}
-                info={card}
-                width={1170}
-                height={567}
-              />
+              <Card info={card} className={s.card} width={1170} height={567} />
             </li>
-          )}
+          ))}
         </ul>
       </Container>
     </section>
   );
-}
+};
 
 export default Stories;

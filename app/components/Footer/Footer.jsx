@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import {socials} from "stubs/socials";
+import { socials } from 'stubs/socials';
 
 import Container from 'components/Container';
 
@@ -14,7 +14,7 @@ const Footer = () => {
           <p className={s.description}>Наши социальные сети</p>
 
           <ul className={s.list}>
-            {socials.map((item) =>
+            {socials.map((item) => (
               <li key={item.name}>
                 <a href={item.link} className={s.link}>
                   <FontAwesomeIcon
@@ -26,12 +26,12 @@ const Footer = () => {
                   {item.name}
                 </a>
               </li>
-            )}
+            ))}
           </ul>
         </div>
       </Container>
     </footer>
   );
-}
+};
 
 export default Footer;

@@ -1,11 +1,11 @@
-'use client'
+'use client';
 
-import {useState, useEffect} from "react";
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import cx from 'classnames'
+import cx from 'classnames';
 
-import {navigation} from "stubs/navigation";
+import { navigation } from 'stubs/navigation';
 
 import s from './Header.module.scss';
 
@@ -14,27 +14,25 @@ const Header = () => {
   const [isWindowScrollPosition, setIsWindowScrollPosition] = useState(0);
 
   const handlerScrollWindow = () => {
-    setIsWindowScrollPosition(window.scrollY)
-  }
+    setIsWindowScrollPosition(window.scrollY);
+  };
 
   useEffect(() => {
     if (isWindowScrollPosition > 450) {
-      setIsHeaderSticky(true)
+      setIsHeaderSticky(true);
     } else {
-      setIsHeaderSticky(false)
+      setIsHeaderSticky(false);
     }
 
-    window.addEventListener('scroll', handlerScrollWindow)
-
+    window.addEventListener('scroll', handlerScrollWindow);
 
     return () => {
-      window.removeEventListener('scroll', handlerScrollWindow)
-    }
-
-  }, [isWindowScrollPosition])
+      window.removeEventListener('scroll', handlerScrollWindow);
+    };
+  }, [isWindowScrollPosition]);
 
   return (
-    <header className={cx(s.header, {[s.sticky]: isHeaderSticky})}>
+    <header className={cx(s.header, { [s.sticky]: isHeaderSticky })}>
       <div className={s.container}>
         <div className={s.wrapper}>
           <a href="/">
@@ -48,13 +46,13 @@ const Header = () => {
           </a>
           <nav className={s.nav}>
             <ul className={s.list}>
-              {navigation.map((link) =>
-                  <li key={link.text}>
-                    <Link className={s.link} href={link.path}>
-                      {link.text}
-                    </Link>
-                  </li>
-              )}
+              {navigation.map((link) => (
+                <li key={link.text}>
+                  <Link className={s.link} href={link.path}>
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
           <a className={s.link} href="tel:+79999999999">
@@ -64,6 +62,6 @@ const Header = () => {
       </div>
     </header>
   );
-}
+};
 
 export default Header;
