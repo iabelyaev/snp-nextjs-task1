@@ -1,82 +1,66 @@
 import Image from 'next/image';
-import PropTypes from "prop-types";
-import cx from "classnames";
+import { shape, string, node, objectOf } from 'prop-types';
+import cx from 'classnames';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-import Button from 'components/Button/Button';
+import Button from 'components/Button';
 
-import styles from './Card.module.scss';
+import s from './Card.module.scss';
 
-const Card = ({
-    info,
-    width,
-    height,
-    path = '/',
-    isCardChoose,
-    isCardStory
-  }) => {
-
+const Card = ({ info, className, width, height, path = '/' }) => {
   return (
-    <article className={cx(styles.card,
-      {[styles.cardChoose]: isCardChoose,
-      [styles.cardStory]: isCardStory})
-    }
-    >
-      <div className={cx(styles.text,
-        {[styles.cardText]: isCardStory})
-      }
-      >
-        <h3 className={cx(styles.title, {[styles.titleChoose]: isCardChoose,
-          [styles.titleStory]: isCardStory})}>
-          {info.title}
-        </h3>
-        <p className={cx(styles.description, {[styles.descriptionChoose]: isCardChoose,
-          [styles.descriptionStory]: isCardStory})}
-        >
+    <article className={cx(s.card, className)}>
+      <div className={cx(s.text)}>
+        <h3 className={cx(s.title)}>{info.title}</h3>
+        <p className={cx(s.description)}>
           {info.price ? 'от 80 000 руб' : info.description}
         </p>
       </div>
       <Image
-        className={styles.image}
+        className={s.image}
         src={info.img}
         loading="lazy"
-        alt=""
+        alt={info.title}
         width={width}
         height={height}
       />
-      <div className={styles.footer}>
-        <Button href={path} className={styles.link} icon={faArrowRight}>
+      <div className={s.footer}>
+        <Button href={path} className={s.link} icon={faArrowRight}>
           Подробнее
         </Button>
 
         {info.social && (
-          <div className={styles.social}>
-            {info.social.map((item) => {
-              return (
-                <a
-                  key={item.name}
-                  className={styles.social_link}
-                  href={item.link}
-                  target="_blank">
-                  {item.name}
-                </a>
-              );
-            })}
+          <div className={s.social}>
+            {info.social.map((item) => (
+              <a
+                key={item.name}
+                className={s.social_link}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer">
+                {item.name}
+              </a>
+            ))}
           </div>
         )}
       </div>
-      <div className={styles.overlay}></div>
+      <div className={s.overlay}></div>
     </article>
   );
-}
+};
 
 Card.propTypes = {
-  info: PropTypes.object,
-  width: PropTypes.node,
-  height: PropTypes.node,
-  path: PropTypes.string,
-  isCardChoose: PropTypes.bool,
-  isCardStory: PropTypes.bool
-}
+  info: shape({
+    title: string,
+    description: string,
+    name: string,
+    img: string,
+    socials: objectOf(string),
+  }),
+  width: node,
+  height: node,
+  path: string,
+  className: string,
+};
 
 export default Card;

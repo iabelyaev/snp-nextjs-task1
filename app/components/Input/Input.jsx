@@ -1,23 +1,23 @@
 'use client';
 
 import InputMask from 'react-input-mask';
-import PropTypes from "prop-types";
+import { string } from "prop-types";
 
-import styles from './Input.module.scss';
+import s from './Input.module.scss';
 
 const Input = (props) => {
   const { title, ...rest } = props;
 
   return (
-    <label className={styles.input}>
+    <label className={s.input}>
       <span>{title}</span>
-      <InputMask className={styles.filed} required {...rest} />
+      <InputMask className={s.filed} required {...rest} />
     </label>
   );
 }
 
 Input.propTypes = {
-  title: PropTypes.string
+  title: string
 }
 
 export default Input;

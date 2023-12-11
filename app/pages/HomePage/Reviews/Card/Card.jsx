@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import PropTypes from 'prop-types';
+import { string, any } from 'prop-types';
 
 import styles from './Card.module.scss';
 
@@ -22,10 +22,10 @@ const Card = ({text, author, title, img}) => {
 }
 
 Card.propTypes = {
-  text: PropTypes.string,
-  title: PropTypes.string,
-  img: PropTypes.any,
-  author: PropTypes.string
+  text: string,
+  title: string,
+  img: any,
+  author: string
 }
 
 export default Card

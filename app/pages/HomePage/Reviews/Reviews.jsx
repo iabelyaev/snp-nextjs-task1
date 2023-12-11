@@ -1,36 +1,33 @@
-import {reviews} from "stubs/reviews";
+import { reviews } from 'stubs/reviews';
 
-import Title from 'components/Title/Title';
-import Container from "components/Container/Container";
+import Title from 'components/Title';
+import Container from 'components/Container';
 
-import Card from './Card/Card';
+import Card from './Card';
 
-import styles from './Reviews.module.scss';
+import s from './Reviews.module.scss';
 
 const Reviews = () => {
   return (
-    <section className={styles.reviews} id="reviews">
+    <section className={s.reviews} id="reviews">
       <Container>
-        <Title
-            className={styles.wrapper}
-            title={`Отзывы нашиx\nпутешественников`}
-        />
+        <Title className={s.wrapper} title={`Отзывы нашиx\nпутешественников`} />
 
-        <ul className={styles.list}>
-            {reviews.map((card, index) =>
-              <li key={index}>
-                <Card
-                  text={card.text}
-                  author={card.userInfo.author}
-                  title={card.userInfo.titleTour}
-                  img={card.userInfo.img}
-                />
-              </li>
-            )}
+        <ul className={s.list}>
+          {reviews.map((card, index) => (
+            <li key={index}>
+              <Card
+                text={card.text}
+                author={card.userInfo.author}
+                title={card.userInfo.titleTour}
+                img={card.userInfo.img}
+              />
+            </li>
+          ))}
         </ul>
       </Container>
     </section>
   );
-}
+};
 
 export default Reviews;

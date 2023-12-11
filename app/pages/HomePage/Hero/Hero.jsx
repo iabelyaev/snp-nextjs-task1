@@ -1,25 +1,24 @@
-import Container from "components/Container/Container";
+import Container from 'components/Container';
 
-import styles from './Hero.module.scss';
+import s from './Hero.module.scss';
+
 const Hero = () => {
   return (
-    <section className={styles.hero}>
+    <section className={s.hero}>
       <Container>
-        <div className={styles.wrapper}>
-          <h1 className={styles.title}>
-            Идеальные путешествия существуют
-          </h1>
-          <p className={styles.description}>
+        <div className={s.wrapper}>
+          <h1 className={s.title}>Идеальные путешествия существуют</h1>
+          <p className={s.description}>
             Идейные соображения высшего порядка, а также рамки и место обучения
             кадров
           </p>
-          <a className={styles.link} href="/">
+          <a className={s.link} href="/">
             Найти тур
           </a>
         </div>
       </Container>
     </section>
   );
-}
+};
 
 export default Hero;

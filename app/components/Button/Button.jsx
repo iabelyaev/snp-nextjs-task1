@@ -1,9 +1,9 @@
 import Link from "next/link";
-import PropTypes from "prop-types";
+import {string, any} from "prop-types";
 import cx from 'classnames'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-import styles from './Button.module.scss'
+import s from './Button.module.scss'
 
 const Button = (props) => {
   const {
@@ -17,7 +17,7 @@ const Button = (props) => {
 
   return (
     <Link
-      className={cx(styles.button, className)}
+      className={cx(s.button, className)}
       href={href}
       {...rest}
     >
@@ -28,10 +28,10 @@ const Button = (props) => {
 }
 
 Button.propTypes = {
-  type: PropTypes.string,
-  href: PropTypes.string,
-  className: PropTypes.string,
-  icon: PropTypes.any
+  type: string,
+  href: string,
+  className: string,
+  icon: any
 }
 
 export default Button;
