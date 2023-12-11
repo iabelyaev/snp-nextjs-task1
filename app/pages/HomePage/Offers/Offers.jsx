@@ -2,18 +2,18 @@ import Image from 'next/image';
 
 import Container from 'components/Container';
 
-import styles from './Offers.module.scss';
+import s from './Offers.module.scss';
 
 const Offers = () => {
   return (
-    <section className={styles.offers}>
+    <section className={s.offers}>
       <Container>
-        <div className={styles.offers__wrapper}>
-          <div className={styles.offers__text}>
-            <h2 className={styles.offers__title}>
+        <div className={s.offers__wrapper}>
+          <div className={s.offers__text}>
+            <h2 className={s.offers__title}>
               Пора в путешествие вместе с нами!
             </h2>
-            <p className={styles.offers__description}>
+            <p className={s.offers__description}>
               Напиши на почту и узнай подробности <br />
               на <a href="mailto:yourtour@gmail.com">yourtour@gmail.com</a>
             </p>
@@ -28,6 +28,6 @@ const Offers = () => {
       </Container>
     </section>
   );
-}
+};
 
 export default Offers;
