@@ -78,6 +78,7 @@
   line-height: 1.42em;
   text-align: center;
   color: inherit;
+  outline: 0;
 
   @include vp-767 {
     font-size: 1.6rem;
@@ -94,9 +95,13 @@
     transition: width 0.3s ease;
   }
 
-  @include hover {
+  @include hover-focus {
     &::after {
       width: 100%;
     }
+  }
+
+  @include active {
+    opacity: 0.3;
   }
 }

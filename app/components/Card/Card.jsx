@@ -3,7 +3,7 @@ import { shape, string, node, objectOf } from 'prop-types';
 import cx from 'classnames';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-import Button from 'components/Button';
+import Link from 'components/Link';
 
 import s from './Card.module.scss';
 
@@ -25,9 +25,9 @@ const Card = ({ info, className, width, height, path = '/' }) => {
         height={height}
       />
       <div className={s.footer}>
-        <Button href={path} className={s.link} icon={faArrowRight}>
+        <Link href={path} className={s.link} icon={faArrowRight}>
           Подробнее
-        </Button>
+        </Link>
 
         {info.social && (
           <div className={s.social}>

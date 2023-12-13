@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import cx from 'classnames';
 
 import { chooseCards } from 'stubs/choose';
+import { tabs } from 'stubs/tabs';
 
 import Card from 'components/Card';
 import Container from 'components/Container';
@@ -12,32 +14,8 @@ import s from './Choose-tour.module.scss';
 const ChooseTour = () => {
   const [activeTab, setActiveTab] = useState('popular');
 
-  const tabs = [
-    {
-      title: 'Популярные',
-      category: 'popular',
-    },
-    {
-      title: 'Авторские',
-      category: 'copyright',
-    },
-    {
-      title: 'Походы',
-      category: 'hiking',
-    },
-    {
-      title: 'Сплавы',
-      category: 'alloys',
-    },
-    {
-      title: 'Велопрогулки',
-      category: 'cyclingTrips',
-    },
-  ];
-
-  const getActiveTab = (category) => {
-    const cN = s.tab;
-    return activeTab === category ? `${cN} ${s.tab__active}` : cN;
+  const toggleTabs = (category) => {
+    setActiveTab(category);
   };
 
   return (
@@ -48,13 +26,15 @@ const ChooseTour = () => {
         </div>
 
         <div className={s.tabs}>
-          {tabs.map((item) => (
+          {tabs.map((btn) => (
             <button
-              key={item.category}
-              className={getActiveTab(item.category)}
+              key={btn.category}
+              className={cx(s.tab, {
+                [s.tab__active]: activeTab === btn.category,
+              })}
               type="button"
-              onClick={() => setActiveTab(item.category)}>
-              {item.title}
+              onClick={() => toggleTabs(btn.category)}>
+              {btn.title}
             </button>
           ))}
         </div>
