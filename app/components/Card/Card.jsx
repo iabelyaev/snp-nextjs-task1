@@ -32,14 +32,14 @@ const Card = ({ info, className, width, height, path = '/' }) => {
         {info.social && (
           <div className={s.social}>
             {info.social.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 className={s.social_link}
                 href={item.link}
                 target="_blank"
                 rel="noopener noreferrer">
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
         )}
