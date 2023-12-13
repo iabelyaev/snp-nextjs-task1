@@ -1,11 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import cx from 'classnames';
 
 import { navigation } from 'stubs/navigation';
+
+import Link from 'components/Link';
 
 import s from './Header.module.scss';
 
@@ -48,7 +49,7 @@ const Header = () => {
             <ul className={s.list}>
               {navigation.map((link) => (
                 <li key={link.text}>
-                  <Link className={s.link} href={link.path}>
+                  <Link className={s.link} path={link.path}>
                     {link.text}
                   </Link>
                 </li>

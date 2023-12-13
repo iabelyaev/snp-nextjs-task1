@@ -1,4 +1,5 @@
 import Container from 'components/Container';
+import Link from 'components/Link';
 
 import s from './Hero.module.scss';
 
@@ -12,9 +13,9 @@ const Hero = () => {
             Идейные соображения высшего порядка, а также рамки и место обучения
             кадров
           </p>
-          <a className={s.link} href="/">
+          <Link className={s.link} href="#">
             Найти тур
-          </a>
+          </Link>
         </div>
       </Container>
     </section>
