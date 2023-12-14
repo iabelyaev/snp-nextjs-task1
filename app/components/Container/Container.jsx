@@ -1,4 +1,4 @@
-import { node, element } from 'prop-types';
+import { node } from 'prop-types';
 
 import s from './Container.module.scss';
 
