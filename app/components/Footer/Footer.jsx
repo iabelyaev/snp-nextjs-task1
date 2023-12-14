@@ -17,7 +17,7 @@ const Footer = () => {
           <ul className={s.list}>
             {socials.map((item) => (
               <li key={item.name}>
-                <Link href={item.link} className={s.link}>
+                <Link href={item.link} className={s.link} target="_blank">
                   <FontAwesomeIcon
                     icon={[
                       item.fontawesome.prefix || 'fa',

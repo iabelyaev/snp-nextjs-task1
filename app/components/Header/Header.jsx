@@ -49,16 +49,16 @@ const Header = () => {
             <ul className={s.list}>
               {navigation.map((link) => (
                 <li key={link.text}>
-                  <Link className={s.link} path={link.path}>
+                  <Link className={s.link} href={link.path}>
                     {link.text}
                   </Link>
                 </li>
               ))}
             </ul>
           </nav>
-          <a className={s.link} href="tel:+79999999999">
+          <Link className={s.link} href="tel:+79999999999">
             +7 999 999 99 99
-          </a>
+          </Link>
         </div>
       </div>
     </header>

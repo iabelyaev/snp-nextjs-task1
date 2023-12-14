@@ -13,7 +13,7 @@ const Hero = () => {
             Идейные соображения высшего порядка, а также рамки и место обучения
             кадров
           </p>
-          <Link className={s.link} href="#">
+          <Link className={s.link} href="#form">
             Найти тур
           </Link>
         </div>

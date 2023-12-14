@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import Container from 'components/Container';
+import Link from 'components/Link';
 
 import s from './Offers.module.scss';
 
@@ -15,7 +16,8 @@ const Offers = () => {
             </h2>
             <p className={s.offers__description}>
               Напиши на почту и узнай подробности <br />
-              на <a href="mailto:yourtour@gmail.com">yourtour@gmail.com</a>
+              на{' '}
+              <Link href="mailto:yourtour@gmail.com">yourtour@gmail.com</Link>
             </p>
           </div>
           <Image
