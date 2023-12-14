@@ -1,7 +1,7 @@
 export const socials = [
   {
     name: 'instagram',
-    link: '/',
+    link: 'https://www.instagram.com/',
     fontawesome: {
       prefix: 'fab',
       name: 'instagram',
@@ -9,7 +9,7 @@ export const socials = [
   },
   {
     name: 'facebook',
-    link: '/',
+    link: 'https://www.facebook.com/',
     fontawesome: {
       prefix: 'fab',
       name: 'facebook',
@@ -17,7 +17,7 @@ export const socials = [
   },
   {
     name: 'vkontakte',
-    link: '/',
+    link: 'https://vk.com/',
     fontawesome: {
       prefix: 'fab',
       name: 'vk',

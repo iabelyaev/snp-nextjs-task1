@@ -3,6 +3,7 @@ import cx from 'classnames';
 import Container from 'components/Container';
 import Title from 'components/Title';
 import Input from 'components/Input';
+import Link from 'components/Link';
 
 import s from './Form.module.scss';
 
@@ -115,16 +116,14 @@ const Form = () => {
             </label>
           </fieldset>
           <div className={s.buttons}>
-            <button
-              className={cx(s.button, { [s.primary]: true })}
-              type="submit">
+            <Link className={cx(s.button, { [s.primary]: true })} type="submit">
               Найти тур
-            </button>
-            <button
+            </Link>
+            <Link
               className={cx(s.button, { [s.secondary]: true })}
               type="reset">
               Сбросить
-            </button>
+            </Link>
           </div>
         </form>
       </Container>

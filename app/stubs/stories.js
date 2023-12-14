@@ -11,15 +11,15 @@ export const storiesCard = [
     social: [
       {
         name: 'instagram',
-        link: '/',
+        link: 'https://www.instagram.com/',
       },
       {
         name: 'facebook',
-        link: '/',
+        link: 'https://www.facebook.com/',
       },
       {
         name: 'YouTube',
-        link: '/',
+        link: 'https://www.youtube.com/',
       },
     ],
   },
@@ -31,11 +31,11 @@ export const storiesCard = [
     social: [
       {
         name: 'instagram',
-        link: '/',
+        link: 'https://www.instagram.com/',
       },
       {
         name: 'ВКонтакте',
-        link: '/',
+        link: 'https://vk.com/',
       },
     ],
   },
@@ -47,15 +47,15 @@ export const storiesCard = [
     social: [
       {
         name: 'instagram',
-        link: '/',
+        link: 'https://www.instagram.com/',
       },
       {
         name: 'facebook',
-        link: '/',
+        link: 'https://www.facebook.com/',
       },
       {
         name: 'ВКонтакте',
-        link: '/',
+        link: 'https://vk.com/',
       },
     ],
   },

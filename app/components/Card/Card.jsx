@@ -36,8 +36,7 @@ const Card = ({ info, className, width, height, path = '/' }) => {
                 key={item.name}
                 className={s.social_link}
                 href={item.link}
-                target="_blank"
-                rel="noopener noreferrer">
+                target="_blank">
                 {item.name}
               </Link>
             ))}
