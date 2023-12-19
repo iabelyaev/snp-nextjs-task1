@@ -8,7 +8,7 @@ import { tabs } from 'stubs/tabs';
 
 import Card from 'components/Card';
 import Container from 'components/Container';
-import Link from 'components/Link';
+import Button from 'components/Button';
 
 import s from './Choose-tour.module.scss';
 
@@ -28,7 +28,8 @@ const ChooseTour = () => {
 
         <div className={s.tabs}>
           {tabs.map((btn) => (
-            <Link
+            <Button
+              as={'button'}
               key={btn.category}
               className={cx(s.tab, {
                 [s.tab__active]: activeTab === btn.category,
@@ -36,7 +37,7 @@ const ChooseTour = () => {
               type="button"
               onClick={() => toggleTabs(btn.category)}>
               {btn.title}
-            </Link>
+            </Button>
           ))}
         </div>
 
