@@ -3,10 +3,11 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import cx from 'classnames';
+import Link from 'next/link';
 
 import { navigation } from 'stubs/navigation';
 
-import Link from 'components/Link';
+import Button from 'components/Button';
 
 import s from './Header.module.scss';
 
@@ -49,16 +50,16 @@ const Header = () => {
             <ul className={s.list}>
               {navigation.map((link) => (
                 <li key={link.text}>
-                  <Link className={s.link} href={link.path}>
+                  <Button as={Link} className={s.link} href={link.path}>
                     {link.text}
-                  </Link>
+                  </Button>
                 </li>
               ))}
             </ul>
           </nav>
-          <Link className={s.link} href="tel:+79999999999">
+          <Button as={'a'} className={s.link} href="tel:+79999999999">
             +7 999 999 99 99
-          </Link>
+          </Button>
         </div>
       </div>
     </header>

@@ -3,42 +3,43 @@ import { shape, string, node, objectOf } from 'prop-types';
 import cx from 'classnames';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-import Link from 'components/Link';
+import Button from 'components/Button';
 
 import s from './Card.module.scss';
 
 const Card = ({ info, className, width, height, path = '/' }) => {
   return (
     <article className={cx(s.card, className)}>
-      <div className={cx(s.text)}>
-        <h3 className={cx(s.title)}>{info.title}</h3>
-        <p className={cx(s.description)}>
+      <div className={s.text}>
+        <h3 className={s.title}>{info.title}</h3>
+        <p className={s.description}>
           {info.price ? 'от 80 000 руб' : info.description}
         </p>
       </div>
       <Image
         className={s.image}
         src={info.img}
-        loading="lazy"
         alt={info.title}
         width={width}
         height={height}
       />
       <div className={s.footer}>
-        <Link href={path} className={s.link} icon={faArrowRight}>
+        <Button as={'a'} href={path} className={s.link} icon={faArrowRight}>
           Подробнее
-        </Link>
+        </Button>
 
         {info.social && (
           <div className={s.social}>
             {info.social.map((item) => (
-              <Link
+              <Button
+                as={'a'}
                 key={item.name}
                 className={s.social_link}
                 href={item.link}
-                target="_blank">
+                target="_blank"
+                rel="noopener noreferrer">
                 {item.name}
-              </Link>
+              </Button>
             ))}
           </div>
         )}

@@ -3,9 +3,10 @@ import cx from 'classnames';
 import Container from 'components/Container';
 import Title from 'components/Title';
 import Input from 'components/Input';
-import Link from 'components/Link';
+import Button from 'components/Button';
 
 import s from './Form.module.scss';
+import button from 'components/Button';
 
 const Form = () => {
   return (
@@ -116,14 +117,18 @@ const Form = () => {
             </label>
           </fieldset>
           <div className={s.buttons}>
-            <Link className={cx(s.button, { [s.primary]: true })} type="submit">
+            <Button
+              as={'button'}
+              className={cx(s.button, { [s.primary]: true })}
+              type="submit">
               Найти тур
-            </Link>
-            <Link
+            </Button>
+            <Button
+              as={'button'}
               className={cx(s.button, { [s.secondary]: true })}
               type="reset">
               Сбросить
-            </Link>
+            </Button>
           </div>
         </form>
       </Container>
