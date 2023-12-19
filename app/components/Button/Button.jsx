@@ -16,7 +16,7 @@ const Button = ({
   return (
     <As className={cx(s.link, className)} target={target} href={href} {...rest}>
       {children}
-      {icon ? <FontAwesomeIcon icon={icon} /> : null}
+      {icon && <FontAwesomeIcon icon={icon} />}
     </As>
   );
 };
