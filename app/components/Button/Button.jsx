@@ -1,4 +1,3 @@
-import NextLink from 'next/link';
 import cx from 'classnames';
 import { any, string, node } from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

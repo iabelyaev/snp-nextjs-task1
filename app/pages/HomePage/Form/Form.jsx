@@ -6,7 +6,6 @@ import Input from 'components/Input';
 import Button from 'components/Button';
 
 import s from './Form.module.scss';
-import button from 'components/Button';
 
 const Form = () => {
   return (
