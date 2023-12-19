@@ -27,6 +27,7 @@ Button.propTypes = {
   icon: any,
   children: node.isRequired,
   target: string,
+  as: any,
 };
 
 export default Button;
